@@ -1,5 +1,5 @@
 // código declarativo
-const { useState } = require("react");
+const { useState, default: React } = require("react");
 
 const Contador = () => {
 	const sumar = () => setContador(contador + 1);
