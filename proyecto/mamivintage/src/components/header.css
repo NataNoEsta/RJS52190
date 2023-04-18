@@ -1,0 +1,22 @@
+.headerbody {
+    height: 100vh;
+    background-color: #a4f09d;
+}
+.headerbody h1 {
+    text-align:center;
+    font-family: 'Rozha One', serif;
+    font-size: 6rem;
+    
+}
+.header-figure {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    right: 0;
+}
+figure {
+    margin: 0;
+    display: flex;
+    align-content: flex-end;
+    flex-wrap: wrap;
+}
