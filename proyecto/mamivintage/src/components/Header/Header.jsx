@@ -1,5 +1,5 @@
 import "./header.css";
-import bg from "../assets/bg.png";
+import bg from "../../assets/bg.png";
 
 const Header = () => {
 	return (
