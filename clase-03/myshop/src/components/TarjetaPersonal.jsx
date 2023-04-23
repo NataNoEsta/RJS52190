@@ -13,7 +13,7 @@ export const TarjetaPersonal = ({ nombre, edad, curso }) => {
 	// console.log(props);
 
 	return (
-		<div style={styles} className="card__tarjeta">
+		<div style={styles} className="card__tarjeta container mb-2 py-2 mt-4">
 			<h3>Nombre: {nombre}</h3>
 			<p>Edad: {edad}</p>
 			<p>Curso: {curso}</p>
