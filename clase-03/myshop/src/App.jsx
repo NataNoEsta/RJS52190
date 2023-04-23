@@ -1,15 +1,17 @@
-import './App.css'
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { Clicker } from "./components/Clicker";
 // import  Equipo  from './components/Equipo'
 import TarjetaPersonal from "./components/TarjetaPersonal";
 import { NavBar } from "./components/Navbar/NavBar";
 import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
+import Contenedor from "./Contenedor";
 
 function App() {
 	return (
 		<>
 			<NavBar />
-			<ItemListContainer saludo={"Holis holis"} />
+
 			<div className="App">
 				<h1>Hola, mundo!</h1>
 				{/* <Equipo />
@@ -19,10 +21,14 @@ function App() {
 					edad="33"
 					curso="Arte"
 				/>
-				<Clicker />
+
+				<Contenedor>
+					<ItemListContainer saludo={"Holis holis"} />
+					<Clicker />
+				</Contenedor>
 			</div>
 		</>
 	);
 }
 
-export default App
+export default App;
