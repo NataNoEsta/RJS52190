@@ -10,10 +10,10 @@ const ItemListContainer = ({ figura, nombre, descripcion, precio }) => {
 	return (
 		<div className="contenedor-item" style={styles}>
 			<figure>
-				<img src={figura} style={{ maxWidth: 400 }} />
+				<img src="./vestido.png" style={{ maxWidth: 400 }} />
 			</figure>
-			<h3 style={{ fontSize: 22, textAlign: "center" }}>{nombre} </h3>
-			<ul style={{ listStyleType: "none", textAlign: "center" }}>
+			<h3>{nombre} </h3>
+			<ul>
 				<li>
 					<strong>Descripción:</strong> {descripcion}
 				</li>
