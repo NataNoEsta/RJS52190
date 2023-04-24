@@ -1,22 +1,19 @@
-.headerbody {
-    height: auto;
-    background-color: #a4f09d;
+.header__container {
+  height: auto;
+  background-color: #a4f09d;
 }
-.headerbody h1 {
-    text-align:center;
-    font-family: 'Rozha One', serif;
-    font-size: 6rem;
-    
+.header__container h1 {
+  text-align: center;
+  font-family: "Rozha One", serif;
+  font-size: 6rem;
 }
-.header-figure {
-    position: absolute;
-    display: block;
-    bottom: 0;
-    right: 0;
+.header__container .header-image {
+  max-width: 400px;
 }
+
 figure {
-    margin: 0;
-    display: flex;
-    align-content: flex-end;
-    flex-wrap: wrap;
-}
+  margin: 0;
+  display: flex;
+  align-content: flex-end;
+  flex-wrap: wrap;
+}/*# sourceMappingURL=header.css.map */

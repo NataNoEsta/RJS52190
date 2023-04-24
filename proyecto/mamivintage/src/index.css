@@ -1,18 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Italiana&family=Rozha+One&display=swap');
-@tailwindcss base;
-@tailwindcss components;
-@tailwindcss utilities;
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  
-}
+@import "tailwindcss/base";
+/* @import "./custom-base.css"; */
+@import "tailwindcss/components";
+/* @import "./custom-components.css"; */
+@import "tailwindcss/utilities";
+/* @import "./custom-utilities.css"; */
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

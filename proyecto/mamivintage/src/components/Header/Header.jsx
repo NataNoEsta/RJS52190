@@ -3,7 +3,7 @@ import "./header.css";
 const Header = () => {
 	return (
 		<>
-			<section className="headerbody">
+			<section className="header__container">
 				<h1>Mami Vintage</h1>
 			</section>
 		</>

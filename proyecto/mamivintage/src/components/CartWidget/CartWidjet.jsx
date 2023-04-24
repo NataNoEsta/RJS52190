@@ -1,4 +1,7 @@
+import "./cartwidget.scss";
+
 import shophing from "../../assets/shopping-bag.png";
+
 export const CartWidget = () => {
 	let items = 1;
 	const contador = () => {
@@ -6,18 +9,9 @@ export const CartWidget = () => {
 		console.log(items);
 	};
 	return (
-		<div
-			style={{ display: "flex", flexDirection: "row", paddingRight: 30 }}
-		>
+		<div className="cart_icon__container">
 			<span className="cart-icon">
-				<img
-					src={shophing}
-					style={{
-						maxWidth: 30,
-						height: "auto",
-						display: "flex",
-					}}
-				/>
+				<img src={shophing} />
 			</span>
 			<p className="cart-items">{items}</p>
 		</div>

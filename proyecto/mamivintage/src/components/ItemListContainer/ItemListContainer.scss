@@ -1,0 +1,26 @@
+.item__container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    
+    h3 {
+        font-size: 2rem;
+
+    }
+    ul {
+        list-style-type: none;
+        line-height: 1.4;
+    }
+    .image__container {
+        display: flex;
+
+        .item-image {
+            max-width: 400px;
+            padding: 10px;
+            margin: auto;
+        }
+    }
+}
+   

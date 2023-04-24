@@ -1,18 +1,24 @@
-.navbar {
-    border-bottom: 1px solid black;
-    min-width: 100vw;
-    position: sticky;
-    z-index: 1; 
-    background-color: rgb(242, 142, 255) !important;
-    
+.navbar__container {
+  border-bottom: 1px solid black;
+  min-width: 100vw;
+  position: sticky;
+  display: flex;
+  z-index: 1;
+  background-color: rgb(242, 142, 255) !important;
+  justify-content: space-between;
 }
-.navbar-nav {
-    display: flex;
-    padding: 0;
-   
+.navbar__container .container-fluid {
+  display: flex;
+  padding: 1rem;
 }
-
-a {
-    padding-left: 1rem;
-    padding-right: 1rem;
+.navbar__container .container-fluid a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding-right: 2rem;
 }
+.navbar__container .container-fluid .navbar-nav {
+  display: flex;
+  padding: 0;
+}/*# sourceMappingURL=navbar.css.map */

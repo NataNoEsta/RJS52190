@@ -1,27 +1,25 @@
+import "./ItemListContainer.scss";
+
 const ItemListContainer = ({ figura, nombre, descripcion, precio }) => {
-	const styles = {
-		display: "flex",
-		flexDirection: "column",
-		flexWrap: "wrap",
-		alignContent: "center",
-		justifyContent: "center",
-		marginTop: 50,
-	};
+	figura = "./vestido.png";
 	return (
-		<div className="contenedor-item" style={styles}>
-			<figure>
-				<img src="./vestido.png" style={{ maxWidth: 400 }} />
-			</figure>
-			<h3>{nombre} </h3>
-			<ul>
-				<li>
-					<strong>Descripción:</strong> {descripcion}
-				</li>
-				<li>
-					<strong>Precio:</strong> {precio}
-				</li>
-			</ul>
-		</div>
+		<>
+			<div className="item__container">
+				<figure className="image__container">
+					<img src={figura} className="item-image" />
+				</figure>
+				<h1 className="text-3xl font-bold text-center">algun texto</h1>
+				<h3>{nombre} </h3>
+				<ul>
+					<li className="list__item">
+						<strong>Descripción:</strong> {descripcion}
+					</li>
+					<li className="list__item">
+						<strong>Precio:</strong> {precio}
+					</li>
+				</ul>
+			</div>
+		</>
 	);
 };
 export default ItemListContainer;

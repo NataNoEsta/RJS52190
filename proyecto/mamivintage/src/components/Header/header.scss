@@ -1,0 +1,21 @@
+.header__container {
+    height: auto;
+    background-color: #a4f09d;
+
+    h1 {
+        text-align:center;
+        font-family: 'Rozha One', serif;
+        font-size: 6rem;
+        
+    }
+    .header-image {
+        max-width: 400px;
+    }
+}
+
+figure {
+    margin: 0;
+    display: flex;
+    align-content: flex-end;
+    flex-wrap: wrap;
+}

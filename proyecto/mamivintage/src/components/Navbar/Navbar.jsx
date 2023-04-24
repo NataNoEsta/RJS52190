@@ -1,10 +1,9 @@
-import "./navbar.css";
-import { CartWidget } from "../CartWidget/CartWidjet";
+import "./navbar.scss";
 
-const Navbar = () => {
+const Navbar = ({ children }) => {
 	return (
 		<>
-			<nav className="navbar navbar-expand-lg bg-light">
+			<nav className="navbar__container navbar-expand-lg bg-light">
 				<div className="container-fluid">
 					<a className="navbar-brand" href="#">
 						Mami Vintage
@@ -38,7 +37,7 @@ const Navbar = () => {
 						</div>
 					</div>
 				</div>
-				<CartWidget />
+				{children}
 			</nav>
 		</>
 	);
