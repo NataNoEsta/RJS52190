@@ -12,7 +12,7 @@ export const NavBar = () => {
 					style={{ display: "inline-flex" }}
 				>
 					<img src={logo} alt="logo" style={{ width: 50 }}></img>
-					<h1 className="logo">Logo</h1>
+					<h1 className="logo">Prácticas</h1>
 				</span>
 				<nav className="navbar">
 					<a className="navbar__link" href="/">

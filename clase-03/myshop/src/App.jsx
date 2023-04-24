@@ -6,6 +6,7 @@ import TarjetaPersonal from "./components/TarjetaPersonal";
 import { NavBar } from "./components/Navbar/NavBar";
 import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
 import Contenedor from "./Contenedor";
+import Parrafos from "./components/Parrafos";
 
 function App() {
 	return (
@@ -13,19 +14,15 @@ function App() {
 			<NavBar />
 
 			<div className="App">
-				<h1>Hola, mundo!</h1>
 				{/* <Equipo />
 			<TarjetaPersonal nombre="Natasha Berger" edad="31" curso="React JS" /> */}
-				<TarjetaPersonal
-					nombre="Lucián Berger"
-					edad="33"
-					curso="Arte"
-				/>
+				<TarjetaPersonal nombre="Bubblegum" edad="33" curso="Arte" />
 
 				<Contenedor>
 					<ItemListContainer saludo={"Holis holis"} />
 					<Clicker />
 				</Contenedor>
+				<Parrafos />
 			</div>
 		</>
 	);
