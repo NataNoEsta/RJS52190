@@ -8,8 +8,7 @@ const ItemListContainer = ({ figura, nombre, descripcion, precio }) => {
 				<figure className="image__container">
 					<img src={figura} className="item-image" />
 				</figure>
-				<h1 className="text-3xl font-bold text-center">algun texto</h1>
-				<h3>{nombre} </h3>
+				<h3 className="text-3xl" font-bold>{nombre} </h3>
 				<ul>
 					<li className="list__item">
 						<strong>Descripción:</strong> {descripcion}
