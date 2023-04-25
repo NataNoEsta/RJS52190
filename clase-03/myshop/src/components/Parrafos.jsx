@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import Button from "react-bootstrap/Button";
+import {Button} from "react-bootstrap";
 
 const Parrafos = () => {
 	const parrafoRef = useRef(null);
@@ -12,15 +12,9 @@ const Parrafos = () => {
 		parrafoRef.current.scrollIntoView();
 	};
 	return (
-		<div className="container md my-5 px-2">
-			<Button
-				variant="outline-danger"
-				size="sm"
-				className="py-2 px-4"
-				onClick={handleParrafo}
-			>
-				Disparar useRef
-			</Button>
+		<div className="">
+			<button	onClick={handleParrafo}>
+				Disparar useRef</button>
 			<h3>Parrafo 1</h3>
 			<p>
 				orem ipsum dolor sit amet, consectetur adipiscing elit.

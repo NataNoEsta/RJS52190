@@ -1,12 +1,11 @@
 import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { Clicker } from "./components/Clicker";
-// import  Equipo  from './components/Equipo'
 import TarjetaPersonal from "./components/TarjetaPersonal";
 import { NavBar } from "./components/Navbar/NavBar";
 import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
 import Contenedor from "./Contenedor";
 import Parrafos from "./components/Parrafos";
+import PokeApi from "./components/PokleApi";
 
 function App() {
 	return (
@@ -14,8 +13,7 @@ function App() {
 			<NavBar />
 
 			<div className="App">
-				{/* <Equipo />
-			<TarjetaPersonal nombre="Natasha Berger" edad="31" curso="React JS" /> */}
+				<h1 className="text-3xl font-bold underline"></h1>
 				<TarjetaPersonal nombre="Bubblegum" edad="33" curso="Arte" />
 
 				<Contenedor>
@@ -24,6 +22,7 @@ function App() {
 				</Contenedor>
 				<Parrafos />
 			</div>
+			<PokeApi />
 		</>
 	);
 }

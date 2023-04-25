@@ -1,11 +1,13 @@
 import "./ItemListContainer.css";
-import Card from "react-bootstrap/Card";
+import { useState } from "react";
+// import ItemList from "./ItemList/ItemList";
 
 export const ItemListContainer = ({ saludo }) => {
 	return (
 		<>
-			<div className="list__container container my-5">
-				<h2>Item List Container</h2>
+			<div className="list__container">
+			
+				<h2>Este container es un children</h2>
 				<hr />
 				<p>{saludo}</p>
 			</div>
