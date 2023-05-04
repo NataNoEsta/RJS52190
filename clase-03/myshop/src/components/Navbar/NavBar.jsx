@@ -5,13 +5,10 @@ import logo from "../../assets/octocat.png";
 
 export const NavBar = () => {
 	return (
-		<header className="header">
-			<div className="header__container">
-				<span
-					className="header__logo_title"
-					style={{ display: "inline-flex" }}
-				>
-					<img src={logo} alt="logo" style={{ width: 50 }}></img>
+		<header className="header min-w-full">
+			<div className="header__container container-lg flex">
+				<span className="header__logo_title inline-flex">
+					<img src={logo} alt="logo" className="w-10 h-10 m-1"></img>
 					<h1 className="logo">Prácticas</h1>
 				</span>
 				<nav className="navbar">

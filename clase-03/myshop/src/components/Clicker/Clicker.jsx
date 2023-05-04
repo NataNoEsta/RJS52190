@@ -14,7 +14,7 @@ export const Clicker = () => {
 	return (
 		//estado del componenete // debe regenerarse la vista del comp
 		<div>
-			<button onClick={counter}>Click me!</button>
+			<button onClick={counter} className="rounded-full bg-slate-500 border-1 px-4 py-1">Click me!</button>
 			<p>contador = {count} </p>
 		</div>
 	);

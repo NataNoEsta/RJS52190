@@ -2,7 +2,7 @@
 const Contenedor = ({ children }) => {
 	return (
 		<section
-			className="container bg-dark py-2 mb-4"
+			className="container bg-slate-900 p-4 mb m-auto justify-center"
 			style={{ color: "white" }}
 		>
 			{children}

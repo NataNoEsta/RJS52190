@@ -4,7 +4,6 @@ module.exports = {
     "./components/**/*.{.html,js,jsx}",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  purge: [],
   darkMode: 'media', // or 'media' or 'class'
   theme: {
     extend: {},
