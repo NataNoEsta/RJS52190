@@ -19,7 +19,7 @@ function App() {
 				<Contenedor>
 					<ItemListContainer saludo={"Holis holis"} />
 					<Clicker />
-					<ContentContain/>
+					<ContentContain />
 				</Contenedor>
 				<Parrafos />
 			</div>
