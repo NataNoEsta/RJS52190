@@ -15,15 +15,16 @@ function App() {
 			<div className="App">
 				<h1 className="text-3xl font-bold underline"></h1>
 				<TarjetaPersonal nombre="Bubblegum" edad="33" curso="Arte" />
-				
+
 				<Contenedor>
 					<ItemListContainer saludo={"Holis holis"} />
 					<Clicker />
 					<ContentContain />
 				</Contenedor>
+
+				
 				<Parrafos />
 			</div>
-			
 		</>
 	);
 }
