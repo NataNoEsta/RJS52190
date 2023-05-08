@@ -11,8 +11,8 @@ const Parrafos = () => {
 		parrafoRef.current.scrollIntoView();
 	};
 	return (
-		<div className="container flex flex-col flex-wrap p-4 my-auto mx-auto max-w-lg">
-			<button	onClick={handleParrafo}>
+		<div className="container flex flex-col flex-wrap p-4 my-auto mx-auto max-w-3xl">
+			<button	onClick={handleParrafo} className="border border-slate-800 px-5 py-2 max-w-fit mx-auto">
 				Disparar useRef</button>
 			<h3 className="text-3xl px-2 font-bold text-cyan-800">Parrafo 1</h3>
 			<p>

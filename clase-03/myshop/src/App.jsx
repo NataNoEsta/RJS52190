@@ -6,26 +6,29 @@ import { ItemListContainer } from "./components/ItemListContainer/ItemListContai
 import Contenedor from "./Contenedor";
 import Parrafos from "./components/Parrafos";
 import ContentContain from "./components/ContentContain";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 function App() {
 	return (
-		<>
+		<BrowserRouter>
 			<NavBar />
-
-			<div className="App">
-				<h1 className="text-3xl font-bold underline"></h1>
-				<TarjetaPersonal nombre="Bubblegum" edad="33" curso="Arte" />
-
-				<Contenedor>
-					<ItemListContainer saludo={"Holis holis"} />
-					<Clicker />
-					<ContentContain />
-				</Contenedor>
-
-				
-				<Parrafos />
-			</div>
-		</>
+			<Routes>
+				<Route
+					path="/"
+					element={
+						<Contenedor>
+							<ItemListContainer saludo={"Holis holis"} />
+							<Clicker />
+							<ContentContain />
+						</Contenedor>
+					}
+				/>
+				<Route path="/acerca" element={<TarjetaPersonal nombre="Bubblegum" edad="33" curso="Arte" />} />
+				<Route path="/ayuda" element={<Parrafos />} />
+				{/* <Route path="*" element={ <h1>Not found</h1> }/> <Pagina404 />*/}
+				<Route path="*" element={ <Navigate to={"/"} />} />
+			</Routes>	
+		</BrowserRouter>
 	);
 }
 
