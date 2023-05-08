@@ -1,46 +1,34 @@
 import "./ItemListContainer.scss";
+import { useEffect, useState } from "react";
+import { pedirDatos } from "../../helpers/pedirDatos";
+import ItemList from "../ItemList/ItemList";
 
-const ItemListContainer = ({
-	figura,
-	nombre,
-	descripcion,
-	precio,
-	children,
-}) => {
-	figura = "./vestido.png";
+const ItemListContainer = () => {
 
-	const promesa = new Promise((resolve, reject) => {
-		setTimeout(() => {
-			// resolve("resuelto");
-			reject("rechazada");
-		}, 3000);
-	});
+	const [productos, setProductos] = useState([])
+	const [loading, setLoading] = useState(true)
 	// la promsea se resuelve a los 3segundos
-	promesa
-		.then((res) => {
-			console.log(res);
+	useEffect(() => {
+		setLoading(true)
+		pedirDatos().then((res) => {
+			setProductos(res);
+		}).catch((err) => {
+			console.log(err)
+		}).finally(() => {
+			setLoading(false)
 		})
-		.catch((err) => {
-			console.log(err);
-		});
+	},[])
+
 	console.log("fin");
 
 	return (
 		<>
-			<div className="item__container container md:container justify-center align-middle">
-				<figure className="image__container">
-					<img src={figura} className="item-image" />
-				</figure>
-				<h3 className="text-xl font-bold">{nombre} </h3>
-				<ul className="list-none py-2">
-					<li className="list__item text-base">
-						<strong>Descripción:</strong> {descripcion}
-					</li>
-					<li className="list__item text-base">
-						<strong>Precio:</strong> {precio}
-					</li>
-				</ul>
-				{children}
+			<div className="item__container container bg-white p-4 mb m-auto flex flex-row flex-wrap justify-center max-w-none">
+				{
+					loading
+						? <h1>Cargando...</h1>
+						: <ItemList items={productos} />
+				}
 			</div>
 		</>
 	);
