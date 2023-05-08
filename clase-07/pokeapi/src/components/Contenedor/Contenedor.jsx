@@ -1,4 +1,4 @@
-const Contenedor = ( {children} ) => {
+const Contenedor =  ( {children} ) => {
 	return (
 		<section
 

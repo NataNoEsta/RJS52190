@@ -1,18 +1,21 @@
-import './App.css'
-import Contenedor from './components/Contenedor/Contenedor'
-import { ItemListContainer } from './components/ItemListContainer/ItemListContainer'
+import "./App.css";
+import Contenedor from "./components/Contenedor/Contenedor";
+import PokeList from "./components/PokeList/PokeList";
+// import { ItemListContainer } from './components/ItemListContainer/ItemListContainer'
 
 function App() {
-
-  return (
-    <>
-      <div>
-       <Contenedor>
-         <ItemListContainer/>
-       </Contenedor>
-      </div>
-    </>
-  )
+	return (
+		<>
+			<div>
+				{" "}
+				{/* <ItemListContainer/> */}
+				{/* <PokeApi/> */}
+				<Contenedor>
+					<PokeList />
+				</Contenedor>
+			</div>
+		</>
+	);
 }
 
-export default App
+export default App;
