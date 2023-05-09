@@ -1,12 +1,17 @@
 import "./navbar.scss";
+import { Link } from "react-router-dom";
+import favicon from '/favicon.png'
 
 const Navbar = ({ children }) => {
 	return (
 		<nav className="navbar__container mw-lg bg-white shadow-md">
-			<div className="container-fluid flex-1 flex-grow">
-				<a className="navbar-brand" href="#">
+			<div className="container-fluid flex-1 flex-grow justify-around">
+				<span className="inline-flex flex-row"><img src={favicon} alt="logo" className="w-5 h-5 m-1"></img><Link to="/" className="navbar-brand" >
 					Mami Vintage
-				</a>
+				</Link>
+				<Link to="shop/Sweater" className="nav-link active">Sweaters</Link>
+				<Link to="shop/Abrigos" className="nav-link active">Abrigos</Link>
+				</span>
 				<button
 					className="navbar-toggler"
 					type="button"
@@ -20,19 +25,20 @@ const Navbar = ({ children }) => {
 					id="navbarNavAltMarkup"
 				>
 					<div className="navbar-nav">
-						<a
+					
+						<Link
 							className="nav-link active"
 							aria-current="page"
-							href="/"
+							to="shop"
 						>
 							Shop
-						</a>
-						<a className="nav-link" href="#">
+						</Link>
+						<Link to="nosotros" className="nav-link" >
 							Nosotros
-						</a>
-						<a className="nav-link" href="#">
+						</Link>
+						<Link to="ayuda" className="nav-link" >
 							FAQ
-						</a>
+						</Link>
 					</div>
 				</div>
 			</div>

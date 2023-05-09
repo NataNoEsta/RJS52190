@@ -1,18 +1,19 @@
+import './item.scss'
 const Item = ({item}) => {
     
-    const { id, nombre, categoria, imagen, descripcion, precio } = item
+    const { id, nombre, category, imagen, descripcion, precio } = item
 
 	return (
 		<article
 			/*key={item.id}*/
-			className="max-w-sm ml-2 flex flex-wrap flex-col justify-center px-2"
+			className="itemcard max-w-sm gap-2 flex flex-wrap flex-col justify-center align-middle m-2"
 		>
-			<h1 className="text-2xl font-bold">{nombre}</h1>
-            <h3 className="text-xl font-semibold">{categoria}</h3>
-			<img className="w-80" src={imagen} />
+			<h1 className="text-2xl font-bold text-center">{nombre}</h1>
+            <p className="text-center text-red-400 font-semibold text-base">{category}</p>
+			<img className="image_product" src={imagen} />
 			<p className="text-base text-center">{descripcion}</p>
-			<p className="text-base text-center">{precio}</p>
-			<button className=" text-blue-400 border border-blue-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
+			<p className="text-base text-center font-semibold">Precio: ${precio}</p>
+			<button className="btn-ver text-blue-400 border border-blue-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
 				ver más
 			</button>
 		</article>
