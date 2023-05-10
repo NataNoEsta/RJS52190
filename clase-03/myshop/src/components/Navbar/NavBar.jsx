@@ -2,6 +2,7 @@ import "./Navbar.scss";
 // importacion de imagen como modulo
 import logo from "../../assets/octocat.png";
 // alternativa: apuntar a la carpeta public
+import { Link } from "react-router-dom";
 
 export const NavBar = () => {
 	return (
@@ -12,15 +13,15 @@ export const NavBar = () => {
 					<h1 className="logo">Prácticas</h1>
 				</span>
 				<nav className="navbar">
-					<a className="navbar__link" href="/">
+					<Link to="/" className="navbar__link" >
 						index
-					</a>
-					<a className="navbar__link" href="#">
+					</Link>
+					<Link to="acerca" className="navbar__link" >
 						acerca
-					</a>
-					<a className="navbar__link" href="#">
+					</Link>
+					<Link to="ayuda" className="navbar__link" >
 						ayuda
-					</a>
+					</Link>
 				</nav>
 			</div>
 		</header>

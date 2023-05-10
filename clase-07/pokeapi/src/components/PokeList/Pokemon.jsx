@@ -14,7 +14,7 @@ const Pokemon = ({url}) => {
 	}, []);
 
     return (
-        <div className="border align-middle justify-center max-w-sm m-4 p-2 flex-initial">
+        <div className="border align-middle justify-center max-w-sm m-4 p-2">
         {   
             pokemon && 
             <div>
