@@ -1,33 +1,6 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  color: rgba(48, 48, 48, 0.87);
-  background-color: #ececec;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #f25375;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3rem;
-  line-height: 1.2;
-}
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 @media (max-width: 768px) {
   :root {

@@ -1,0 +1,28 @@
+.navbar__container {
+  min-width: 100vw;
+  position: sticky;
+  display: flex;
+  z-index: 1;
+  background-color: rgb(242, 142, 255) !important;
+  justify-content: space-between;
+}
+.navbar__container .container-fluid {
+  display: flex;
+  padding: 1rem;
+}
+.navbar__container .container-fluid a {
+  text-decoration: none;
+  color: white;
+  text-transform: none;
+  font-weight: 600;
+  padding-right: 2rem;
+}
+.navbar__container .container-fluid .navbar-nav {
+  display: flex;
+  padding: 0;
+}
+.navbar__container .container-fluid .navbar-brand {
+  text-decoration: underline;
+  font-family: "Meddon", cursive;
+  text-decoration-thickness: 3px;
+}/*# sourceMappingURL=navbar.css.map */

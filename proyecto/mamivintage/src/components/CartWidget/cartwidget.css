@@ -1,0 +1,14 @@
+.cart_icon__container {
+  display: flex;
+  flex-direction: row;
+  padding-right: 20px;
+}
+.cart_icon__container .cart-icon {
+  display: flex;
+  justify-content: center;
+}
+.cart_icon__container .cart-icon img {
+  max-width: 30px;
+  height: 30px;
+  align-self: center;
+}/*# sourceMappingURL=cartwidget.css.map */

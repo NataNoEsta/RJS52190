@@ -1,0 +1,22 @@
+.item__container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+.item__container h3 {
+  font-size: 2rem;
+}
+.item__container ul {
+  list-style-type: none;
+  line-height: 1.4;
+}
+.item__container .image__container {
+  display: flex;
+}
+.item__container .image__container .item-image {
+  max-width: 400px;
+  padding: 10px;
+  margin: auto;
+}/*# sourceMappingURL=ItemListContainer.css.map */

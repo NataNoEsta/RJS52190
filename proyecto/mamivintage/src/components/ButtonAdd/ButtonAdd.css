@@ -1,0 +1,14 @@
+.container {
+  display: inline-flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+.container input {
+  border: 1px solid pink;
+  text-align: center;
+}
+.container .btn__add {
+  padding: 0.2rem 2.35rem;
+  border-radius: 12px;
+  border: 1px solid pink;
+}/*# sourceMappingURL=ButtonAdd.css.map */

@@ -1,0 +1,30 @@
+.navbar__container {
+	min-width: 100vw;
+	position: sticky;
+	display: flex;
+	z-index: 1;
+	background-color: rgb(242, 142, 255) !important;
+    justify-content: space-between;
+
+	.container-fluid {
+		display: flex;
+		padding: 1rem;
+
+		a {
+			text-decoration: none;
+			color: white;
+			text-transform: none;
+			font-weight: 600;
+			padding-right: 2rem;
+		}
+		.navbar-nav {
+			display: flex;
+			padding: 0;
+		}
+		.navbar-brand {
+			text-decoration: underline;
+			font-family: 'Meddon', cursive;
+			text-decoration-thickness: 3px;
+		}
+	}
+}

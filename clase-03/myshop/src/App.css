@@ -1,15 +1,15 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-li {
-  color: salmon;
+li,
+p {
+	color: salmon;
 }
-.card {
-  padding: 2em;
+.card__tarjeta {
+	display: block;
+	margin: 0 auto;
+	padding: 4rem;
 }
-

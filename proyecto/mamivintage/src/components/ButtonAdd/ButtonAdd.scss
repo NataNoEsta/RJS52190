@@ -1,0 +1,15 @@
+.container {
+	display: inline-flex;
+    justify-content: center;
+    margin: 0 auto;
+
+    input {
+        border: 1px solid pink;
+        text-align: center;
+    }
+	.btn__add {
+        padding: .2rem 2.35rem;
+        border-radius: 12px;
+		border: 1px solid pink;
+	}
+}

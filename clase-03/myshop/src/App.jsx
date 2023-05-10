@@ -1,16 +1,35 @@
-import './App.css'
-import  Equipo  from './components/Equipo'
-import  TarjetaPersonal  from './components/TarjetaPersonal'
+import "./App.css";
+import { Clicker } from "./components/Clicker/Clicker";
+import TarjetaPersonal from "./components/TarjetaPersonal";
+import { NavBar } from "./components/Navbar/NavBar";
+import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
+import Contenedor from "./Contenedor";
+import Parrafos from "./components/Parrafos";
+import ContentContain from "./components/ContentContain";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 function App() {
-
-  return (
-		<div className="App">
-			<h1>Hola, mundo!</h1>
-			<Equipo />
-			<TarjetaPersonal nombre="Natasha Berger" edad="31" curso="React JS" />
-		</div>
-  );
+	return (
+		<BrowserRouter>
+			<NavBar />
+			<Routes>
+				<Route
+					path="/"
+					element={
+						<Contenedor>
+							<ItemListContainer saludo={"Holis holis"} />
+							<Clicker />
+							<ContentContain />
+						</Contenedor>
+					}
+				/>
+				<Route path="/acerca" element={<TarjetaPersonal nombre="Bubblegum" edad="33" curso="Arte" />} />
+				<Route path="/ayuda" element={<Parrafos />} />
+				{/* <Route path="*" element={ <h1>Not found</h1> }/> <Pagina404 />*/}
+				<Route path="*" element={ <Navigate to={"/"} />} />
+			</Routes>	
+		</BrowserRouter>
+	);
 }
 
-export default App
+export default App;
