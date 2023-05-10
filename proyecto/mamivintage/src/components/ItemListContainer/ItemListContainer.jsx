@@ -29,7 +29,7 @@ const ItemListContainer = () => {
 		}).finally(() => {
 			setLoading(false)
 		})
-	},[])
+	},[category])
 
 	console.log("fin");
 

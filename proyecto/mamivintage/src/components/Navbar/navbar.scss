@@ -13,13 +13,18 @@
 		a {
 			text-decoration: none;
 			color: white;
-			text-transform: uppercase;
+			text-transform: none;
 			font-weight: 600;
 			padding-right: 2rem;
 		}
 		.navbar-nav {
 			display: flex;
 			padding: 0;
+		}
+		.navbar-brand {
+			text-decoration: underline;
+			font-family: 'Meddon', cursive;
+			text-decoration-thickness: 3px;
 		}
 	}
 }

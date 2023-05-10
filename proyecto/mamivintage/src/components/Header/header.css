@@ -4,8 +4,10 @@
 }
 .header__container h1 {
   text-align: center;
-  font-family: "Rozha One", serif;
-  font-size: 6rem;
+  padding-top: 1.2rem;
+  text-transform: lowercase;
+  font-family: "Meddon", cursive;
+  font-size: 5rem;
 }
 .header__container .header-image {
   max-width: 400px;
