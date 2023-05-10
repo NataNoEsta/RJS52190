@@ -1,5 +1,5 @@
 import { useState } from "react";
-let carrito = [];
+import './ButtonAdd.scss'
 
 export const ButtonAdd = () => {
 
@@ -12,18 +12,11 @@ export const ButtonAdd = () => {
 		setCantidad(cantidad ? cantidad - 1 : 0);
 	};
 
-	function AgregarCarrito() {
-		if (cantidad > 0) {
-			carrito.push("hola");
-		}
-		console.log(carrito);
-	}
-
 	return (
 		<>
-			<div className="container flex flex-wrap w-1/2 justify-center">
+			<div className="container inline-flex flex-wrap w-1/2">
 				<input
-					className="border-2 border-black w-10"
+					className="border-2 border-black w-10 justify-center"
 					type="button"
 					value="-"
 					onClick={handleDisminuir}
@@ -35,14 +28,13 @@ export const ButtonAdd = () => {
 					value={cantidad}
 				/>
 				<input
-					className="border-2 border-black w-10"
+					className="border-2 border-black w-10 justify-center"
 					type="button"
 					value="+"
 					onClick={handleAumentar}
 				/>
 				<button
-				className="border-2 border-pink-400 ring-2 btn__add"
-				onClick={AgregarCarrito}
+				className="hover:ring-2 btn__add mx-4"
 			>
 				Agregar
 			</button>

@@ -1,0 +1,16 @@
+.container {
+	display: flex;
+	flex-direction: row;
+    // justify-self: center;
+    margin: auto;
+
+    input {
+        border: 1px solid pink;
+        text-align: center;
+    }
+	.btn__add {
+        padding: .2rem 2.35rem;
+        border-radius: 12px;
+		border: 1px solid pink;
+	}
+}
