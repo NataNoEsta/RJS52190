@@ -1,0 +1,22 @@
+footer {
+	position: relative;
+  display: block;
+  overflow-x: hidden;
+
+  // .container_footer {
+	// 	width: auto;
+  //   bottom: 0;
+	// 	height: fit-content;
+	// }
+  
+	section .main_row {
+		height: 100px;
+    position: absolute;
+		width: 100%;
+		bottom: 0;
+
+		.footer_column {
+			margin: 0;
+		}
+	}
+}

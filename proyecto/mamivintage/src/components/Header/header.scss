@@ -1,6 +1,7 @@
 .header__container {
-    height: auto;
+    height: 9rem;
     background-color: whitesmoke;
+    overflow-y: hidden !important;
 
     h1 {
         text-align:center;
@@ -10,14 +11,4 @@
         font-size: 5rem;
         
     }
-    .header-image {
-        max-width: 400px;
-    }
-}
-
-figure {
-    margin: 0;
-    display: flex;
-    align-content: flex-end;
-    flex-wrap: wrap;
 }

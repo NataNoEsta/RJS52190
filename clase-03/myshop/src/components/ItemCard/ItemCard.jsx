@@ -9,7 +9,7 @@ const ItemCard = ({item}) => {
 
 	return (
 		<article
-			/*key={item.id}*/
+			key={item.id}
 			className="max-w-sm ml-2 flex flex-wrap flex-col justify-center px-2"
 		>
 			<h1 className="text-2xl font-bold">{nombre}</h1>

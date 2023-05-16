@@ -3,12 +3,15 @@ import "./Navbar.scss";
 import logo from "../../assets/octocat.png";
 // alternativa: apuntar a la carpeta public
 import { Link } from "react-router-dom";
+import Buscador from "../Buscador";
 
 export const NavBar = () => {
 	return (
-		<header className="header min-w-full">
+		<header className="header min-w-full align-middle">
 			<div className="header__container container-lg flex">
+				<Buscador />
 				<span className="header__logo_title inline-flex">
+					
 					<img src={logo} alt="logo" className="w-10 h-10 m-1"></img>
 					<h1 className="logo">Prácticas</h1>
 				</span>

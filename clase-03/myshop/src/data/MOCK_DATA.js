@@ -9,7 +9,7 @@ const MOCK_DATA = [
 	},
 	{
 		id: 1,
-		nombre: "campera",
+		nombre: "Remera",
 		precio: 1500,
 		imagen: "https://64.media.tumblr.com/788e48fa21a59d65f4f0c75b3a8479be/86ccc524845f549b-2a/s1280x1920/9fcdb95cb63cf90a49fc1711e80fe424c08e30b8.jpg",
 		descripcion: "Lorem ipsum dolor sit amet",
@@ -17,7 +17,7 @@ const MOCK_DATA = [
 	},
 	{
 		id: 2,
-		nombre: "campera",
+		nombre: "Conjunto",
 		precio: 1500,
 		imagen: "https://64.media.tumblr.com/788e48fa21a59d65f4f0c75b3a8479be/86ccc524845f549b-2a/s1280x1920/9fcdb95cb63cf90a49fc1711e80fe424c08e30b8.jpg",
 		descripcion: "Lorem ipsum dolor sit amet",
@@ -25,7 +25,7 @@ const MOCK_DATA = [
 	},
 	{
 		id: 3,
-		nombre: "campera",
+		nombre: "Jogger",
 		precio: 1500,
 		imagen: "https://64.media.tumblr.com/788e48fa21a59d65f4f0c75b3a8479be/86ccc524845f549b-2a/s1280x1920/9fcdb95cb63cf90a49fc1711e80fe424c08e30b8.jpg",
 		descripcion: "Lorem ipsum dolor sit amet",
@@ -40,7 +40,7 @@ const MOCK_DATA = [
 	},
 	{
 		id: 5,
-		nombre: "campera",
+		nombre: "Medias",
 		precio: 1500,
 		imagen: "https://64.media.tumblr.com/788e48fa21a59d65f4f0c75b3a8479be/86ccc524845f549b-2a/s1280x1920/9fcdb95cb63cf90a49fc1711e80fe424c08e30b8.jpg",
 		descripcion: "Lorem ipsum dolor sit amet",
@@ -56,8 +56,8 @@ const MOCK_DATA = [
 	},
 	{
 		id: 7,
-		nombre: "campera",
-		precio: 1500,
+		nombre: "Sweater",
+		precio: 1200,
 		imagen: "https://64.media.tumblr.com/788e48fa21a59d65f4f0c75b3a8479be/86ccc524845f549b-2a/s1280x1920/9fcdb95cb63cf90a49fc1711e80fe424c08e30b8.jpg",
 		descripcion: "Lorem ipsum dolor sit amet",
 		stock: 9,
@@ -65,22 +65,22 @@ const MOCK_DATA = [
 	{
 		id: 8,
 		nombre: "campera",
-		precio: 1500,
+		precio: 1110,
 		imagen: "https://64.media.tumblr.com/788e48fa21a59d65f4f0c75b3a8479be/86ccc524845f549b-2a/s1280x1920/9fcdb95cb63cf90a49fc1711e80fe424c08e30b8.jpg",
 		descripcion: "Lorem ipsum dolor sit amet",
 		stock: 5,
 	},
 	{
 		id: 9,
-		nombre: "campera",
-		precio: 1500,
+		nombre: "Camisa",
+		precio: 1300,
 		imagen: "https://64.media.tumblr.com/788e48fa21a59d65f4f0c75b3a8479be/86ccc524845f549b-2a/s1280x1920/9fcdb95cb63cf90a49fc1711e80fe424c08e30b8.jpg",
 		descripcion: "Lorem ipsum dolor sit amet",
 		stock: 5,
 	},
 	{
 		id: 10,
-		nombre: "campera",
+		nombre: "Buzo",
 		precio: 1500,
 		imagen: "https://64.media.tumblr.com/788e48fa21a59d65f4f0c75b3a8479be/86ccc524845f549b-2a/s1280x1920/9fcdb95cb63cf90a49fc1711e80fe424c08e30b8.jpg",
 		descripcion: "Lorem ipsum dolor sit amet",

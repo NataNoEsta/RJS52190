@@ -7,6 +7,9 @@
   border: 1px solid pink;
   text-align: center;
 }
+.container input[type=button] {
+  cursor: pointer;
+}
 .container .btn__add {
   padding: 0.2rem 2.35rem;
   border-radius: 12px;

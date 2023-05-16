@@ -1,16 +1,23 @@
-import "./ItemListContainer.css";
-import { useState } from "react";
-// import ItemList from "./ItemList/ItemList";
+import { useEffect, useState } from "react";
+import { pedirDatos } from "../../utils/pedirDatos";
+import ItemList from "../ItemList/ItemList";
+import { useProductos } from "../hooks/useProductos";
 
-export const ItemListContainer = ({ saludo }) => {
+// componente
+const ItemListContainer = () => {
+
+	const {loading, productos} = useProductos()
+
 	return (
-		<>
-			<div className="list__container">
+
+		<div className="container min-w-fit my-0 mx-2 p-2 flex flex-row flex-wrap justify-center">
+			{
+				loading
+					? <h2>cargando...</h2>
+					:<ItemList items={productos} />
+			}
 			
-				<h2>Este container es un children</h2>
-				<hr />
-				<p>{saludo}</p>
-			</div>
-		</>
-	);
-};
+		</div>
+	)
+}
+export default ItemListContainer

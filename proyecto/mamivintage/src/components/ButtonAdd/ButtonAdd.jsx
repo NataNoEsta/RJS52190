@@ -1,18 +1,24 @@
-import { useEffect, useState } from "react";
+import { useRef, useState } from "react";
 import './ButtonAdd.scss'
 
-export const ButtonAdd = () => {
-
-	let [cantidad, setCantidad] = useState(0);
-	console.log(cantidad)
-
+export const ButtonAdd = ({cantidad, setCantidad, stock, handleAdd}) => {
+	// let [cantidad, setCantidad] = useState(1);
+	// const cantidadRef = useRef(0)
+	
 	const handleAumentar = () => {
-		setCantidad(cantidad + 1);
+		cantidad < stock && setCantidad(cantidad + 1);
 	};
 	const handleDisminuir = () => {
-		setCantidad(cantidad ? cantidad - 1 : 0);
+		setCantidad(cantidad ? cantidad - 1 : 1);
 	};
 
+	// const agregarCarrito = () => {
+
+	// 	console.log({
+	// 		...item,
+	// 		cantidad
+	// 	})
+	// }
 	return (
 		<>
 			<div className="container inline-flex flex-wrap">
@@ -25,8 +31,8 @@ export const ButtonAdd = () => {
 				<input
 					className="border-t-2 border-b-2 border-black w-12"
 					type="text"
-					readonly
-					value={cantidad}
+					readOnly
+					onChange={handleAumentar || handleDisminuir} value={cantidad}
 				/>
 				<input
 					className="border-2 border-black w-10 justify-center"
@@ -35,7 +41,7 @@ export const ButtonAdd = () => {
 					onClick={handleAumentar}
 				/>
 				<button
-				className="hover:ring-2 btn__add "
+				className="hover:ring-2 btn__add" onClick={handleAdd}
 			>
 				Agregar
 			</button>

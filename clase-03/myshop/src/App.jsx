@@ -2,10 +2,9 @@ import "./App.css";
 import { Clicker } from "./components/Clicker/Clicker";
 import TarjetaPersonal from "./components/TarjetaPersonal";
 import { NavBar } from "./components/Navbar/NavBar";
-import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import Contenedor from "./Contenedor";
 import Parrafos from "./components/Parrafos";
-import ContentContain from "./components/ContentContain";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 function App() {
@@ -17,9 +16,8 @@ function App() {
 					path="/"
 					element={
 						<Contenedor>
-							<ItemListContainer saludo={"Holis holis"} />
-							<Clicker />
-							<ContentContain />
+							<ItemListContainer />
+							<Clicker />				
 						</Contenedor>
 					}
 				/>

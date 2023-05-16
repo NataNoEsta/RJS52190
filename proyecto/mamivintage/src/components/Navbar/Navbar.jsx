@@ -1,10 +1,12 @@
 import "./navbar.scss";
 import { Link } from "react-router-dom";
 import favicon from "/favicon.png";
+import { useEffect } from "react";
 
 const Navbar = ({ children }) => {
+
 	return (
-		<nav className="navbar__container mw-lg bg-white shadow-md">
+		<nav className="navbar__container bg-white shadow-md">
 			<div className="container-fluid flex-1 flex-grow justify-around">
 				<span className="inline-flex flex-row">
 					<img src={favicon} alt="logo" className="w-5 h-5 m-1"></img>

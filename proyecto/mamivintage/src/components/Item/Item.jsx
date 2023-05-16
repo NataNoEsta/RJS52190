@@ -8,7 +8,7 @@ const Item = ({item}) => {
 	return (
 		<article
 			/*key={item.id}*/
-			className="itemcard max-w-sm gap-2 flex flex-wrap flex-col justify-center align-middle m-2"
+			className="itemcard max-w-sm gap-2 flex flex-wrap flex-col justify-center align-middle m-4"
 		>
 			<h1 className="text-2xl font-bold text-center">{nombre}</h1>
             <Link to={`/shop/${category}`} className="text-center text-red-400 font-semibold text-base">{category}</Link>

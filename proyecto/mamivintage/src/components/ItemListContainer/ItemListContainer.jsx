@@ -38,7 +38,7 @@ const ItemListContainer = () => {
 			<div className="item__container container bg-white gap-4 py-10 m-auto flex flex-row flex-wrap justify-center max-w-6xl">
 				{
 					loading
-						? <h1 className="animate-pulse font-bold text-2xl">cargando...</h1>
+						? <div className="loader h-full"><h1 className="animate-pulse font-bold text-2xl">cargando...</h1></div>
 						: <ItemList items={productos} />
 				}
 			</div>

@@ -1,20 +1,28 @@
 .item-detail-card {
-    border-radius: 15px;
-    box-shadow: 1px 0 9px rgb(0,0,0, .3);
     padding: 0.1rem 4rem .4rem 4rem ;
-    align-content: center;
-    justify-items: center;
     margin: auto;
-    
-    .image_product {
-        max-width: 40rem;
+    flex-wrap: wrap;
+    flex-basis: 0;
+    flex-grow: 1;
+
+    .left_side {
+        float: left;
+
+        figure {
+            display: block;
+        }
+        .image_product {
+            object-fit: contain;
+            max-width: 30rem;
+        }
     }
-    .button-agregar {
-        width: 200px;
-        border: 1px solid black;
-        display: flex;
-        margin: auto;
-        justify-content: center;
-        font-weight: 400;
+    .right_side {
+        border-radius: 15px;
+        box-shadow: 1px 0 9px rgb(0,0,0, .3);
+        padding: 1rem;
+
+        p, h3 {
+            line-height: 1.5;
+        }
     }
 }

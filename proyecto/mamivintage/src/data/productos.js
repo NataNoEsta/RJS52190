@@ -9,7 +9,8 @@ const product_data = [
     color:"blanco",
     talle:"XS",
     temporada: "otoño-invierno",
-    category: "sweaters"
+    category: "sweaters",
+    stock: 1
   },
   {
     id: 2,
@@ -21,7 +22,8 @@ const product_data = [
     color:"varios",
     talle:"M",
     temporada: "primavera-verano",
-    category: "camisas"
+    category: "camisas",
+    stock: 10
   },
   {
     id: 3,
@@ -33,7 +35,8 @@ const product_data = [
     color:"blanco",
     talle:"M",
     temporada: "otoño-invierno",
-    category: "sweaters"
+    category: "sweaters",
+    stock: 1
   },
   {
     id: 4,
@@ -45,7 +48,8 @@ const product_data = [
     color:"gris",
     talle:"S",
     temporada: "otoño-invierno",
-    category: "abrigos"
+    category: "abrigos",
+    stock: 1
   },
   {
     id: 5,
@@ -57,7 +61,8 @@ const product_data = [
     color:"rosa",
     talle:"S",
     temporada: "primavera-verano",
-    category: "abrigos"
+    category: "abrigos",
+    stock: 3
   },
   {
     id: 6,
@@ -69,7 +74,8 @@ const product_data = [
     color:"azul",
     talle:"L",
     temporada: "otoño-invierno",
-    category: "abrigos"
+    category: "abrigos",
+    stock: 5
   },
   {
     id: 7,
@@ -81,7 +87,8 @@ const product_data = [
     color:"rosa",
     talle:"S",
     temporada: "otoño-invierno",
-    category: "abrigos"
+    category: "abrigos",
+    stock: 1
   },
   {
     id: 8,
@@ -93,7 +100,8 @@ const product_data = [
     color:"rojo",
     talle:"XL",
     temporada: "todas",
-    category: "sweaters"
+    category: "sweaters",
+    stock: 2
   },
   {
     id: 9,
@@ -105,7 +113,8 @@ const product_data = [
     color:"azul",
     talle:"L",
     temporada: "otoño-invierno",
-    category: "abrigos"
+    category: "abrigos",
+    stock: 2
   }
 ]
 export default product_data;

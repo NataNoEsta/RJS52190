@@ -1,6 +1,7 @@
 .header__container {
-  height: auto;
+  height: 9rem;
   background-color: whitesmoke;
+  overflow-y: hidden !important;
 }
 .header__container h1 {
   text-align: center;
@@ -8,14 +9,4 @@
   text-transform: lowercase;
   font-family: "Meddon", cursive;
   font-size: 5rem;
-}
-.header__container .header-image {
-  max-width: 400px;
-}
-
-figure {
-  margin: 0;
-  display: flex;
-  align-content: flex-end;
-  flex-wrap: wrap;
 }/*# sourceMappingURL=header.css.map */
