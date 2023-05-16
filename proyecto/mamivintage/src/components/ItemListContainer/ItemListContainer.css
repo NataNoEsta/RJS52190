@@ -19,6 +19,10 @@
 .item__container .image__container {
   display: flex;
 }
+.item__container .image__container .loader {
+  justify-content: center;
+  align-self: center;
+}
 .item__container .image__container .item-image {
   max-width: 400px;
   padding: 10px;

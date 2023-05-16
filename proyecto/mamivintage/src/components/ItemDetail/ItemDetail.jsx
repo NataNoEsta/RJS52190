@@ -16,21 +16,20 @@ const ItemDetail = ({ item }) => {
 		stock,
 	} = item;
 
-	const [cantidad, setCantidad] = useState(1)
-	const [size, setSize] = useState(null) 
+	const [cantidad, setCantidad] = useState(1);
+	const [size, setSize] = useState(null);
 
 	const handleAdd = () => {
-
 		console.log({
 			...item,
-			cantidad
-		})
-	}
+			cantidad,
+		});
+	};
 
-	const handleSelect = (e) =>{
-		setSize(e.target.value)
-		console.log(size)
-	}
+	const handleSelect = (e) => {
+		setSize(e.target.value);
+		console.log(size);
+	};
 
 	return (
 		<section className="item-detail-card max-w-full flex flex-row flex-wrap justify-center m-auto pb-8">
@@ -49,16 +48,26 @@ const ItemDetail = ({ item }) => {
 				</h1>
 				<p className="text-base py-2">{long_descripcion}</p>
 				<p className="text-base py-2">Color: {color}</p>
-				<p className="text-base py-2">Talle: <select onChange={handleSelect}>
-					<option value={"S"} defaultValue={"S"}>S</option>
-					<option value={"M"}>M</option>
-					<option value={"L"}>L</option>
-				</select></p>
-				<p className="text-base font-semibold pb-8">Precio: ${precio}</p>
+				<p className="text-base py-2">
+					Talle:
+					<select onChange={handleSelect}>
+						<option value={"S"} defaultValue={"S"}>
+							S
+						</option>
+						<option value={"M"}>M</option>
+						<option value={"L"}>L</option>
+					</select>
+				</p>
+				<p className="text-base font-semibold pb-8">
+					Precio: ${precio}
+				</p>
 
-				
-
-				<ButtonAdd cantidad={cantidad} setCantidad={setCantidad} stock={stock} handleAdd={handleAdd}/>
+				<ButtonAdd
+					cantidad={cantidad}
+					setCantidad={setCantidad}
+					stock={stock}
+					handleAdd={handleAdd}
+				/>
 			</article>
 			<Link
 				to={`/shop/${category}`}
