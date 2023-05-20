@@ -1,7 +1,8 @@
 import { useRef, useState } from "react";
 import './ButtonAdd.scss'
 
-export const ButtonAdd = ({cantidad, setCantidad, stock, handleAdd}) => {
+// la prop "agregar" se pasa al botón para como referencia de la funcion "handleAdd"
+export const ButtonAdd = ({cantidad, setCantidad, stock, agregar}) => {
 	// let [cantidad, setCantidad] = useState(1);
 	// const cantidadRef = useRef(0)
 	
@@ -41,7 +42,7 @@ export const ButtonAdd = ({cantidad, setCantidad, stock, handleAdd}) => {
 					onClick={handleAumentar}
 				/>
 				<button
-				className="hover:ring-2 btn__add" onClick={handleAdd}
+				className="hover:ring-2 btn__add" onClick={agregar}
 			>
 				Agregar
 			</button>

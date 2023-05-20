@@ -17,18 +17,21 @@ const ItemDetail = ({ item }) => {
 	} = item;
 
 	const [cantidad, setCantidad] = useState(1);
-	const [size, setSize] = useState(null);
+	const [colores, setColores] = useState(null);
+	let carrito = []
+
 
 	const handleAdd = () => {
 		console.log({
 			...item,
 			cantidad,
 		});
+		carrito.push(item)
 	};
 
 	const handleSelect = (e) => {
-		setSize(e.target.value);
-		console.log(size);
+		setColores(e.target.value);
+		console.log(colores);
 	};
 
 	return (
@@ -47,26 +50,25 @@ const ItemDetail = ({ item }) => {
 					{nombre}
 				</h1>
 				<p className="text-base py-2">{long_descripcion}</p>
-				<p className="text-base py-2">Color: {color}</p>
-				<p className="text-base py-2">
-					Talle:
-					<select onChange={handleSelect}>
-						<option value={"S"} defaultValue={"S"}>
-							S
-						</option>
-						<option value={"M"}>M</option>
-						<option value={"L"}>L</option>
-					</select>
-				</p>
+				{/* <p className="text-base py-2">Color: {color}</p> */}
+				<p className="text-base py-2">Talle: {talle}</p>
 				<p className="text-base font-semibold pb-8">
 					Precio: ${precio}
 				</p>
+				<p className="text-base py-2">Color: </p>
+					<select onChange={handleSelect}>
+						<option value={"rosa"} defaultValue="rosa">
+							color
+						</option>
+						<option value={"azul"}>azul</option>
+						<option value={"blanco"}>blanco</option>
+					</select>
 
 				<ButtonAdd
 					cantidad={cantidad}
 					setCantidad={setCantidad}
 					stock={stock}
-					handleAdd={handleAdd}
+					agregar={handleAdd}
 				/>
 			</article>
 			<Link

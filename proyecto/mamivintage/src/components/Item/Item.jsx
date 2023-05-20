@@ -15,7 +15,7 @@ const Item = ({item}) => {
 			<img className="image_product" src={imagen} />
 			<p className="text-base text-center">{descripcion}</p>
 			<p className="text-base text-center font-semibold">Precio: ${precio}</p>
-			<Link to={`/detail/${item.id}`} className="btn-ver text-red-300 border-2 mb-2 font-medium rounded-lg text-sm py-2.5 text-center mx-auto mb-0">
+			<Link to={`/detail/${item.id}`} className="btn-ver text-red-300 border-2 mb-2 font-medium rounded-lg text-sm py-2.5 text-center mx-auto">
 				ver más...
 			</Link>
 		</article>

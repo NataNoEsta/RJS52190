@@ -8,8 +8,8 @@ const ItemDetailContainer = () => {
     const [item, setItem] = useState({})
     const [loading, setLoading] = useState(true)
     const { itemId } = useParams()
-    console.log(itemId)
-    console.log(item)
+    // console.log(itemId)
+    // console.log(item)
     
     useEffect(()=> {
         setLoading(true)
@@ -23,7 +23,7 @@ const ItemDetailContainer = () => {
         <div className="item__container container bg-white py-10 flex flex-row flex-wrap justify-center max-w-6xl">
         {
             loading
-                ? <h1 className="animate-pulse font-bold text-2xl">cargando...</h1>
+                ? <h1 className="animate-pulse text-center font-bold text-2xl">cargando...</h1>
                 : <ItemDetail item={item} />
         }
     </div>

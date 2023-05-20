@@ -1,15 +1,17 @@
 import { useEffect, useState } from 'react'
 import { useFetch } from '../../hooks/useFetch'
+import { useParams } from 'react-router-dom'
 
 const PokeApi = () => {
   const [id, setId] = useState(1)
+  const {pokeId} = useParams()
+  
   // se puede usar data solo y cambiar pokemon.name,etc en el return
   // o agregar un 'alias'
   const { data: pokemon } = useFetch(
     `https://pokeapi.co/api/v2/pokemon/${id}`,
     [id],
   )
-  console.log(pokemon)
 
   const handleAnterior = () => {
     id >= 1 && setId(id - 1)
