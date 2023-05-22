@@ -1,9 +1,13 @@
 .categoryNavc {
+    position: sticky;
+    max-width:90%;
     background-color: transparent;
+    margin: 2% auto;
 
     .nav-link {
         border: 1px solid salmon;
         color: salmon;
         border-radius: 25px;
+        padding: 4px 12px;
     }
 }

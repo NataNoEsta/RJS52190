@@ -6,11 +6,14 @@ const product_data = [
     descripcion: "Sweater geométrico",
     long_descripcion: "Sweater de lana blanco con diseños geométricos",
     precio: 1200.00,
-    color:"blanco",
-    talle:"XS",
+    variants: [{
+      color: "azul",
+      label: "azul"
+    }],
+    talle: "XS",
     temporada: "otoño-invierno",
     category: "sweaters",
-    stock: 1
+    stock: 4
   },
   {
     id: 2,
@@ -19,8 +22,23 @@ const product_data = [
     descripcion: "Camisa clásica a rayas",
     long_descripcion: "Camisa clásica de poliéster y algodón a rayas unisex",
     precio: 1670.00,
-    color:"varios",
-    talle:"M",
+    variants: [{
+      color: "azul, rojo y negro",
+      label: "azul, rojo y negro"
+    },
+    {
+      color: "verde, azul y negro",
+      label: "verde, azul y negro"
+    },
+    {
+      color: "negro, rojo y blanco",
+      label: "negro, rojo y blanco"
+    },
+    {
+      color: "rosa y violeta",
+      label: "rosa y violeta"
+    }],
+    talle: "M",
     temporada: "primavera-verano",
     category: "camisas",
     stock: 10
@@ -32,11 +50,22 @@ const product_data = [
     descripcion: "Sweater Rombos",
     long_descripcion: "Sweater grande, con diseño clásico de rombos, de lana y algodón",
     precio: 2500.00,
-    color:"blanco",
-    talle:"M",
+    variants: [{
+      value: "negro/blanco",
+      label: "negro/blanco"
+    },
+    {
+      color: "marrón",
+      label: "marrón"
+    },
+    {
+      color: "beige/crema",
+      label: "beige/crema"
+    }],
+    talle: "M",
     temporada: "otoño-invierno",
     category: "sweaters",
-    stock: 1
+    stock: 2
   },
   {
     id: 4,
@@ -45,11 +74,21 @@ const product_data = [
     descripcion: "Saco de lana con diseño",
     long_descripcion: "Saco talle S de lana, tejido a mano, con diseño de naranjas.",
     precio: 3499.99,
-    color:"gris",
-    talle:"S",
+    variants: [{
+      value: "blanco",
+      label: "blanco"
+    }, {
+      value: "naranja",
+      label: "naranja"
+    },
+    {
+      value: "amarillo",
+      label: "amarillo"
+    }],
+    talle: "S",
     temporada: "otoño-invierno",
     category: "abrigos",
-    stock: 1
+    stock: 4
   },
   {
     id: 5,
@@ -58,8 +97,15 @@ const product_data = [
     descripcion: "Saco de lana con diseño",
     long_descripcion: "Saco blanco de lana y algodón, tejido a mano, con diseño de corazones, y bolsillos. Cuello tipo camisero en rib de algodón",
     precio: 3100.00,
-    color:"rosa",
-    talle:"S",
+    variants: [{
+      value: "blanco",
+      label: "blanco"
+    }, {
+      value: "rosa",
+      label: "rosa"
+    }
+    ],
+    talle: "S",
     temporada: "primavera-verano",
     category: "abrigos",
     stock: 3
@@ -71,8 +117,15 @@ const product_data = [
     descripcion: "Campera de jean tipo bomber",
     long_descripcion: "Campera combinada, diseño tipo bomber jacket. Cuerpo de denim rígido y mangas de buzo rústico con detalles de rib a rayas en puños y cuello",
     precio: 3199.99,
-    color:"azul",
-    talle:"L",
+    variants: [{
+      value: "azul clásico",
+      label: "azul clásico"
+    },
+    {
+      value: "jean desgastado",
+      label: "jean desgastado"
+    }],
+    talle: "L",
     temporada: "otoño-invierno",
     category: "abrigos",
     stock: 5
@@ -82,13 +135,23 @@ const product_data = [
     nombre: "Cardigan corazones",
     imagen: "/src/assets/prenda (6).png",
     descripcion: "Cardigan rosa con corazones",
-    long_descripcion: "Cárdigann en tejido sintético, color crudo con detalles de corazones en rosado.",
+    long_descripcion: "Cárdigann en tejido sintético, variante crudo con detalles de corazones en rosado.",
     precio: 2799.09,
-    color:"rosa",
-    talle:"S",
+    variants: [{
+      value: "azul",
+      label: "azul"
+    }, {
+      value: "rosa",
+      label: "rosa"
+    },
+    {
+      value: "blanco",
+      label: "blanco"
+    }],
+    talle: "S",
     temporada: "otoño-invierno",
     category: "abrigos",
-    stock: 1
+    stock: 3
   },
   {
     id: 8,
@@ -97,8 +160,14 @@ const product_data = [
     descripcion: "Sweater retro con corazones",
     long_descripcion: "Sweater retro con corazones, en lana natural. Tejido pesao y abrigado. Talle amplio",
     precio: 2300.00,
-    color:"rojo",
-    talle:"XL",
+    variants: [{
+      value: "azul",
+      label: "azul"
+    }, {
+      value: "blanco",
+      label: "blacno"
+    }],
+    talle: "XL",
     temporada: "todas",
     category: "sweaters",
     stock: 2
@@ -110,8 +179,11 @@ const product_data = [
     descripcion: "Campera de jean",
     long_descripcion: "Campera de jean abrigada, con corderito sintético en su interior",
     precio: 1999.99,
-    color:"azul",
-    talle:"L",
+    variants: [{
+      value: "azul",
+      label: "azul"
+    }],
+    talle: "L",
     temporada: "otoño-invierno",
     category: "abrigos",
     stock: 2

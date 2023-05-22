@@ -1,37 +1,40 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { ButtonAdd } from "../ButtonAdd/ButtonAdd";
 import "./itemDetail.scss";
 import { Link } from "react-router-dom";
+import SkuVariation from "./SkuVariation";
+import { CartContext } from "../context/CartContext";
 
 const ItemDetail = ({ item }) => {
+
+	const {agregarCarrito, itemRepeat} = useContext(CartContext)
+
+	itemRepeat(item.id)
+	console.log(itemRepeat(item.id))
+
 	const {
 		id,
 		nombre,
 		category,
 		imagen,
 		long_descripcion,
-		color,
 		talle,
+		variants,
 		precio,
 		stock,
 	} = item;
 
 	const [cantidad, setCantidad] = useState(1);
-	const [colores, setColores] = useState(null);
-	let carrito = []
-
+	const [variant, setVariant] = useState(null)
 
 	const handleAdd = () => {
-		console.log({
-			...item,
-			cantidad,
-		});
-		carrito.push(item)
-	};
-
-	const handleSelect = (e) => {
-		setColores(e.target.value);
-		console.log(colores);
+	
+		const newItem = {
+			...item, 
+			cantidad, 
+			variant 
+		}
+		agregarCarrito(newItem)
 	};
 
 	return (
@@ -56,13 +59,7 @@ const ItemDetail = ({ item }) => {
 					Precio: ${precio}
 				</p>
 				<p className="text-base py-2">Color: </p>
-					<select onChange={handleSelect}>
-						<option value={"rosa"} defaultValue="rosa">
-							color
-						</option>
-						<option value={"azul"}>azul</option>
-						<option value={"blanco"}>blanco</option>
-					</select>
+				<SkuVariation setVariant={setVariant} options={variants}/>
 
 				<ButtonAdd
 					cantidad={cantidad}

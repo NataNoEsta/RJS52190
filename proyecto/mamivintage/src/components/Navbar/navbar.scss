@@ -1,8 +1,8 @@
 .navbar__container {
-	min-width: 100vw;
-	position: sticky;
+	width: 100vw;
+	max-width: 100%;
+	position: relative;
 	display: flex;
-	z-index: 1;
 	background-color: rgb(242, 142, 255) !important;
     justify-content: space-between;
 

@@ -1,10 +1,10 @@
-
+import './CategoryNabar.scss'
 import { Link } from "react-router-dom";
 
 const CategoryNavbar = () => {
 
 	return (
-		<nav className="categoryNavc flex flex-row bg-transparent w-full">
+		<nav className="categoryNavc flex flex-row bg-transparent">
 			<div className="category-links container flex-grow justify-around">
 					<Link to="shop/sweaters" className="nav-link active">
 						Sweaters

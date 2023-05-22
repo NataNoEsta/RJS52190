@@ -1,8 +1,9 @@
 import "./navbar.scss";
 import { Link } from "react-router-dom";
 import favicon from "/favicon.png";
+import { CartWidget } from "../CartWidget/CartWidget";
 
-const Navbar = ({ children }) => {
+const Navbar = () => {
 	return (
 		<nav className="navbar__container bg-white shadow-md">
 			<div className="container-fluid flex-1 flex-grow justify-around">
@@ -29,10 +30,15 @@ const Navbar = ({ children }) => {
 					<Link to="login" className="nav-link active">
 						Login
 					</Link>
+					<Link to="cart" className="nav-link active">
+						Carrito
+					</Link>
+				<CartWidget/>
 				</div>
+				
 			</div>
 
-			{children}
+			
 		</nav>
 	);
 };
