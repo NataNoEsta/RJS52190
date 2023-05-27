@@ -24,7 +24,7 @@ const ItemDetailContainer = () => {
         {
             loading
                 ? <h1 className="animate-pulse text-center font-bold text-2xl">cargando...</h1>
-                : <ItemDetail item={item} />
+                : <ItemDetail item={item} key={item.id}/>
         }
     </div>
     )

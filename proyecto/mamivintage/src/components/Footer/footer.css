@@ -1,11 +1,12 @@
 footer {
-  position: relative;
-  display: block;
   overflow-x: hidden;
+  position: unset;
+  margin-bottom: 0 !important;
+  bottom: 0 !important;
+  left: 0;
+  right: 0;
 }
 footer section .main_row {
-  height: 100px;
-  position: absolute;
   width: 100%;
   bottom: 0;
 }

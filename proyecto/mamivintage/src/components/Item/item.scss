@@ -1,22 +1,21 @@
 .itemcard {
-    border: 1px solid rgb(41, 41, 41);
-    border-radius: 15px;
-    box-shadow: 1px 0 9px rgb(0,0,0, .3);
-    padding: 6px 6px 0 6px;
-    align-items: center;
-    width: 15rem;
+	border: 1px solid rgb(41, 41, 41);
+	border-radius: 15px;
+	box-shadow: 1px 0 9px rgb(0, 0, 0, 0.3);
+	padding: 6px 6px 0 6px;
+	align-items: center;
+	width: 15rem;
 
-    
-    .image_product {
-        max-width: 10rem;
-    }
-    .btn-ver {
-        max-width: 200px;
-        display: flex;
-        padding: 5px 30px;
-        justify-content: center;
-    }
-    h1{
-        text-overflow: clip;
-    }
+	.image_product {
+		max-width: 10rem;
+	}
+	.btn-ver {
+		max-width: 200px;
+		display: flex;
+		padding: 5px 30px;
+		justify-content: center;
+	}
+	h1 {
+		text-overflow: ellipsis;
+	}
 }

@@ -1,17 +1,18 @@
 footer {
-	position: relative;
-  display: block;
-  overflow-x: hidden;
+	overflow-x: hidden;
+	position:unset;
+	margin-bottom: 0 !important;
+	bottom: 0 !important;
+	left: 0;
+	right: 0;
 
-  // .container_footer {
+	// .container_footer {
 	// 	width: auto;
-  //   bottom: 0;
+	//   bottom: 0;
 	// 	height: fit-content;
 	// }
-  
+
 	section .main_row {
-		height: 100px;
-    position: absolute;
 		width: 100%;
 		bottom: 0;
 

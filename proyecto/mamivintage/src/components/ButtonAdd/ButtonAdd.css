@@ -1,5 +1,5 @@
 .container {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   margin: 0 auto;
 }
@@ -10,8 +10,21 @@
 .container input[type=button] {
   cursor: pointer;
 }
+.container input[type=text] {
+  width: 5rem;
+}
 .container .btn__add {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 600;
   padding: 0.2rem 2.35rem;
-  border-radius: 12px;
+  border-radius: 10px;
   border: 1px solid pink;
+}
+.container .btn__add:focus {
+  outline: none;
+}
+.container .btn__add:hover, .container input[type=button]:hover {
+  border: 1px solid rgb(197, 124, 136);
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);
 }/*# sourceMappingURL=ButtonAdd.css.map */

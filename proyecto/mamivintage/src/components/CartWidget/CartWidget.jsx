@@ -1,33 +1,21 @@
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext } from "react";
 import "./cartwidget.scss";
-import shophing from "/shopping-bag.png";
+import { Link } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
+import { FiShoppingCart } from "react-icons/fi";
 
 export const CartWidget = () => {
-	const cartRef = useRef();
-	const { cart } = useContext(CartContext);
-
-	const [count, setCount] = useState(0);
+	const { totalCantidad } = useContext(CartContext);
 	
-	useEffect(()=>{
-		setCount(cart.length)
-		console.log(count)
-	})
 
 	return (
-		<div className="cart_icon__container relative mr-8">
+		<div className="cart_icon__container relative inline-flex">
 			<span className="cart-icon">
-				<img src={shophing} />
+				<Link to="cart" className="nav-link active">
+					<FiShoppingCart />
+					<p className="cart-items">{totalCantidad()}</p>
+				</Link>
 			</span>
-			
-				 <p
-					ref={cartRef}
-					className="cart-items text-red-700 mt-2 font-bold"
-				>{
-					cart? count : count
-				}</p> 
-
-
 		</div>
 	);
 };

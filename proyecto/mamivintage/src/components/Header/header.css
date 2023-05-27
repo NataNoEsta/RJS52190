@@ -1,12 +1,13 @@
 .header__container {
-  height: 9rem;
-  background-color: whitesmoke;
+  height: auto;
   overflow-y: hidden !important;
 }
 .header__container h1 {
   text-align: center;
-  padding-top: 1.2rem;
   text-transform: lowercase;
   font-family: "Meddon", cursive;
   font-size: 5rem;
+  color: #f4dafc;
+  text-overflow: ellipsis;
+  text-shadow: 0 1px 8px #c7dbe0;
 }/*# sourceMappingURL=header.css.map */

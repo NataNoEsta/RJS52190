@@ -24,25 +24,25 @@ export const ButtonAdd = ({cantidad, setCantidad, stock, agregar}) => {
 		<>
 			<div className="container inline-flex flex-wrap">
 				<input
-					className="border-2 border-black w-10 justify-center"
+					className="border-2 w-10 justify-center"
 					type="button"
 					value="-"
 					onClick={handleDisminuir}
 				/>
 				<input
-					className="border-t-2 border-b-2 border-black w-12"
+					className="border-t-2 border-b-2"
 					type="text"
 					readOnly
 					onChange={handleAumentar || handleDisminuir} value={cantidad}
 				/>
 				<input
-					className="border-2 border-black w-10 justify-center"
+					className="border-2 w-10 justify-center"
 					type="button"
 					value="+"
 					onClick={handleAumentar}
 				/>
 				<button
-				className="hover:ring-2 btn__add" onClick={agregar}
+				className="btn__add w-fit" onClick={agregar}
 			>
 				Agregar
 			</button>

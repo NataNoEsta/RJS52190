@@ -7,3 +7,6 @@
 #root {
   overflow-x: hidden !important;
 }
+h1, h2, h3, p, a {
+  font-family: 'Consolas', sans-serif;
+}

@@ -5,7 +5,7 @@ import { CartWidget } from "../CartWidget/CartWidget";
 
 const Navbar = () => {
 	return (
-		<nav className="navbar__container bg-white shadow-md">
+		<nav className="navbar__container">
 			<div className="container-fluid flex-1 flex-grow justify-around">
 				<span className="inline-flex flex-row">
 					<img src={favicon} alt="logo" className="w-5 h-5 m-1"></img>
@@ -26,19 +26,13 @@ const Navbar = () => {
 						FAQ
 					</Link>
 				</span>
-				<div className="navbar-nav">
-					<Link to="login" className="nav-link active">
+				<div className="container-fluid">
+					<Link to="login" className="nav-link">
 						Login
 					</Link>
-					<Link to="cart" className="nav-link active">
-						Carrito
-					</Link>
-				<CartWidget/>
+					<CartWidget />
 				</div>
-				
 			</div>
-
-			
 		</nav>
 	);
 };
