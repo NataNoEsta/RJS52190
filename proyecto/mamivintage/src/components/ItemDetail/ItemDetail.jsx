@@ -57,9 +57,10 @@ const ItemDetail = ({ item }) => {
 				</h1>
 				<p className="text-base py-2">{long_descripcion}</p>
 				{
-					talle !== "-" ? <p className="text-base py-2">Talle: {talle}</p> : <p className="hidden"></p>
+					talle !== "-" 
+					? <p className="text-base py-2">Talle: {talle}</p> 
+					: <p className="hidden"></p>
 				}
-				
 				
 				<p className="text-base font-semibold py-2">
 					Precio: ${precio}

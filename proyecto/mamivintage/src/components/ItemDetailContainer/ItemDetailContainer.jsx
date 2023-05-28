@@ -10,7 +10,6 @@ const ItemDetailContainer = () => {
     const [item, setItem] = useState({})
     const [loading, setLoading] = useState(true)
     const { itemId } = useParams()
-    // console.log(itemId)
     
     useEffect(()=> {
         setLoading(true)
@@ -27,8 +26,6 @@ const ItemDetailContainer = () => {
             })
             .catch((err) => console.log(err))
             .finally(() => setLoading(false))
-
-
         // pedirDatos()
         //     .then((res) => setItem( res.find((el) => el.id === Number(itemId)) ))
         //     .catch((err) => console.log(err))
