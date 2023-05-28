@@ -6,3 +6,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    h1 {
+        @apply text-3xl;
+    }
+    h2 {
+        @apply text-2xl;
+    }
+    h3 {
+        @apply text-xl;
+    }
+}
+@layer components {
+    .form-input {
+        @apply px-2 py-2 rounded-lg focus:outline-none;
+    }
+}

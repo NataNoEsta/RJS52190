@@ -1,13 +1,16 @@
 .header__container {
   margin: 0;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
   overflow-y: hidden !important;
 }
-.header__container h1 {
+.header__container .title-header {
   text-align: center;
   text-transform: lowercase;
   font-family: "Meddon", cursive;
-  font-size: 4.5rem;
+  font-size: 4.5rem !important;
   color: #f4dafc;
+  line-height: 1.5;
   text-overflow: ellipsis;
   text-shadow: 0 1px 8px #c7dbe0;
 }

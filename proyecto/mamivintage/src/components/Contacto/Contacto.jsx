@@ -1,27 +1,35 @@
 import "./contacto.scss";
 import { useState } from "react";
 
-// const [coment, setComent] = useState(" ")
+
 const Contacto = () => {
 
-	const [nombre, setNombre] = useState('');
-	const [email, setEmail] = useState('');
-    const [coment, setComent] = useState('');
+	const [values, setValues] = useState({
+		nombre: '',
+		email: '',
+		coment: ''
+	});
 	
-    const handleNombre = (e) => {
-		console.log(e.target.value);
-        setNombre(e.target.value)
+    const handleForm = (e) => {
+		// target.name selecciona los inputs según su prop 'name'
+        console.log(e.target.name)
+
+		// el spread resplica los valores anteriores para conservar aquellos que no cambian
+		setValues({
+			...values,
+			// setea con el 'value' del input q haya cambiado según su 'name'
+			[e.target.name] : e.target.value
+
+		})
 	};
+	
 	const handleSubmit = (e) => {
 		e.preventDefault();
+		const ahora = new Date()
 		console.log(e);
+		ahora.toLocaleDateString()
 	};
-    const handleMail=(e)=>{
-
-    }
-    const handleComent = (e) => {
-
-    }
+    
 	return (
 		<section className="container w-full flex-col max-w-lg justify-center align-middle container_contacto">
 			<h1 className="font-semibold text-xl">Contacto</h1>
@@ -30,29 +38,33 @@ const Contacto = () => {
 					className="my-form flex flex-col"
 					onSubmit={handleSubmit}>
 					<label>Nombre</label>
-					<input
-						className="form py-2 rounded-lg focus:outline-none"
+					<input  
+						name="nombre"
+						className="form-input"
 						type="text"
 						placeholder="nombre"
-						value={nombre}
-						onChange={handleNombre}
+						value={values.nombre}
+						onChange={handleForm}
 					/>
 					<label>Email</label>
-					<input
-						className="form py-2 rounded-lg focus:outline-none"
+					<input 
+						name="email"
+						className="form-input"
 						type="email"
 						placeholder="email"
-						value={email}
-                        onChange={handleMail}
+						value={values.email}
+                        onChange={handleForm}
 					/>
 					<label>Comentarios</label>
 					<textarea
-						className="form py-4 border border-pink-300 rounded-lg focus:outline-none"
+						name="coment"
+						className="form-input border-solid border-red-500 rounded-lg focus:outline-none"
 						type="text"
+						value={values.coment}
 						placeholder="comentarios"
-                        onChange={handleComent}
+                        onChange={handleForm}
 					/>
-					<button className="border border-pink-300 py-2 rounded-lg">
+					<button className="button-form py-2 rounded-lg focus:outline-none">
 						Enviar
 					</button>
 				</form>

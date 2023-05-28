@@ -6,21 +6,17 @@
     input {
         border: 1px solid pink;
         text-align: center;
+        font-weight:600;
     }
     input[type=button]{
         cursor: pointer;
-    }
-    input[type=text]{
-        width: 5rem;
-    
-    
     }
 	.btn__add {
         font-size: .8rem;
         text-transform: uppercase;
         font-weight: 600;
-        padding: .2rem 2.35rem;
-        border-radius: 10px;
+        padding: .2rem 2.35rem !important;
+        border-radius: 10px !important;
 		border: 1px solid pink;
 	}
     .btn-disabled {
@@ -34,7 +30,9 @@
         outline: none;
     }
     .btn__add:hover, input[type=button]:hover{
-        border: 1px solid rgb(197, 124, 136);
-        box-shadow: inset 0 1px 4px rgb(0, 0, 0, .1);
+        border: 1px solid rgb(236, 163, 175);
+        background-color: rgb(236, 163, 175, .5);
+        color: white;
+        box-shadow: 0 1px 4px rgba(94, 94, 94, 0.1);
     }
 }

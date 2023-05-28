@@ -71,7 +71,7 @@ const product_data = [
     talle: "M",
     temporada: "otoño-invierno",
     category: "sweaters",
-    stock: 2
+    stock: 5
   },
   {
     id: 4,
@@ -150,11 +150,11 @@ const product_data = [
     precio: 2799.09,
     variants: [
       {
-        value: "azul",
-        label: "azul"
+        value: "celeste pastel",
+        label: "celeste pastel"
       }, {
-        value: "rosa",
-        label: "rosa"
+        value: "rosa pastel",
+        label: "rosa pastel"
       },
       {
         value: "blanco",
@@ -164,7 +164,7 @@ const product_data = [
     talle: "S",
     temporada: "otoño-invierno",
     category: "abrigos",
-    stock: 3
+    stock: 6
   },
   {
     id: 8,
@@ -185,7 +185,7 @@ const product_data = [
     talle: "XL",
     temporada: "todas",
     category: "sweaters",
-    stock: 2
+    stock: 4
   },
   {
     id: 9,
@@ -203,7 +203,7 @@ const product_data = [
     talle: "L",
     temporada: "otoño-invierno",
     category: "abrigos",
-    stock: 2
+    stock: 4
   },
   {
     id: 10,
@@ -222,7 +222,7 @@ const product_data = [
         label: "paloma"
       }
     ],
-    talle: "-",
+    talle: "",
     temporada: "todas",
     category: "accesorios",
     stock: 2
@@ -233,7 +233,7 @@ const product_data = [
     imagen: "/src/assets/pprenda (6).png",
     descripcion: "Zapatos bajos de dama",
     long_descripcion: "Zapatos taco bajo de dama, con detalle de moño",
-    precio: 1999.99,
+    precio: 2000.00,
     variants: [
       {
         value: "celeste gamuza",
@@ -247,7 +247,7 @@ const product_data = [
     talle: "40",
     temporada: "otoño-invierno",
     category: "calzado",
-    stock: 2
+    stock: 3
   },
   {
     id: 12,
@@ -255,7 +255,7 @@ const product_data = [
     imagen: "/src/assets/prenda (9).png",
     descripcion: "Camisa estampada",
     long_descripcion: "Camisa estampada unisex, marca Gucci original",
-    precio: 1999.99,
+    precio: 4269.99,
     variants: [
       {
         value: "verde",

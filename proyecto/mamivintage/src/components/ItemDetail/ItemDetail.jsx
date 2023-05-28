@@ -56,7 +56,6 @@ const ItemDetail = ({ item }) => {
 					{nombre}
 				</h1>
 				<p className="text-base py-2">{long_descripcion}</p>
-				{/* <p className="text-base py-2">Color: {color}</p> */}
 				<p className="text-base py-2">Talle: {talle}</p>
 				<p className="text-base font-semibold py-2">
 					Precio: ${precio}
