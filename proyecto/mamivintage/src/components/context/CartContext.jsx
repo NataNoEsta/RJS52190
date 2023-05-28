@@ -28,9 +28,6 @@ export const CartProvider = ({ children }) => {
 	const vaciarCarrito = (id) => {
 		setCart([])
 	}
-	// const modificarCantidad = (id) => {
-	// 	itemRepeat ? 
-	// }
 	const removeCarrito = (id) => {
 		setCart(cart.filter((item) => item.id !== id))
 	}
