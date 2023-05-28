@@ -19,8 +19,8 @@ const Navbar = () => {
 					>
 						Shop
 					</Link>
-					<Link to="nosotros" className="nav-link">
-						Nosotros
+					<Link to="contacto" className="nav-link">
+						Contacto
 					</Link>
 					<Link to="ayuda" className="nav-link">
 						FAQ

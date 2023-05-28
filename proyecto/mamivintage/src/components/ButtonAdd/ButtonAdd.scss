@@ -12,6 +12,8 @@
     }
     input[type=text]{
         width: 5rem;
+    
+    
     }
 	.btn__add {
         font-size: .8rem;
@@ -21,6 +23,13 @@
         border-radius: 10px;
 		border: 1px solid pink;
 	}
+    .btn-disabled {
+        cursor: not-allowed !important;
+        border: 1px solid rgb(189, 189, 189);
+        background-color: rgb(189, 189, 189);
+        color: grey;
+    }
+
     .btn__add:focus{
         outline: none;
     }

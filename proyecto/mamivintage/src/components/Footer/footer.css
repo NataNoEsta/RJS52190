@@ -1,14 +1,13 @@
 footer {
   overflow-x: hidden;
-  position: unset;
-  margin-bottom: 0 !important;
+  position: sticky;
+  margin-top: auto !important;
   bottom: 0 !important;
-  left: 0;
-  right: 0;
 }
 footer section .main_row {
   width: 100%;
   bottom: 0;
+  display: block;
 }
 footer section .main_row .footer_column {
   margin: 0;

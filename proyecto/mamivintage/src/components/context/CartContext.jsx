@@ -4,31 +4,41 @@ export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
 
-	const [cart, setCart] = useState([]);
+	const [cart, setCart] = useState(() => {
+		try {
+			const storaged = localStorage.getItem("cart_storage");
+			return storaged ? JSON.parse(storaged) : []
+		} catch (error) {
+			return [];
+		}
+	});
+
+	useEffect(()=> {
+		localStorage.setItem("cart_storage", JSON.stringify(cart))
+	}, [cart])
 	
 	// se pasa al provider la funcion
 	const agregarCarrito = (item) => {
 		setCart([...cart, item]);
 	}
 
-	const removeCarrito = (id) => {
-		setCart(cart.filter((item) => item.id !== id))
-	}
-	// const modificarCantidad = (id) => {
-	// 	const cart_slice = [...cart]
-	// 	const item = cart_slice.find((el) => el.id === id)
-	// 	cart_
-	// }
 	const itemRepeat = (id) => {
 		return cart.some((item) => item.id === id);
 	}
 	const vaciarCarrito = (id) => {
 		setCart([])
 	}
-
+	// const modificarCantidad = (id) => {
+	// 	itemRepeat ? 
+	// }
+	const removeCarrito = (id) => {
+		setCart(cart.filter((item) => item.id !== id))
+	}
+	// cantidad total de items
 	const totalCantidad = () => {
 		return cart.reduce((acc, item) => acc + item.cantidad, 0)
 	}
+	// valor final de la compra
 	const totalizador = () => {
 		return cart.reduce((acc, item) => acc + item.cantidad * item.precio, 0)
 	}

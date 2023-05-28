@@ -1,6 +1,7 @@
 .item-detail-card {
     padding: 0.1rem 4rem .4rem 4rem ;
     margin: auto;
+    min-height: 500px;
     flex-direction: row;
     flex-wrap: wrap;
 
@@ -32,6 +33,7 @@
         border-radius: 15px;
         box-shadow: 1px 0 9px rgb(0,0,0, .3);
         padding: 1rem;
+        float: right;
         justify-content: center;
 
         p, h3 {

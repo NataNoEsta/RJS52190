@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Header from "./components/Header/Header";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import LoginScreen from "./components/LoginScreen/LoginScreen";
+import Contacto from "./components/Contacto/Contacto";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import Cart from "./components/Cart/Cart";
@@ -13,8 +14,10 @@ import { CartProvider } from "./components/context/CartContext";
 function App() {
 	// value solo admite 1 valor: puede ser un objeto, variable o función
 	return (
+		<section className="Main">
 		<CartProvider>
 			<BrowserRouter>
+	
 				<Navbar />
 				<CategoryNavbar />
 				<Header />
@@ -25,6 +28,7 @@ function App() {
 						path="/shop/:category"
 						element={<ItemListContainer />}
 					/>
+					<Route path="/contacto" element={<Contacto />} />
 					<Route path="/cart" element={<Cart />} />
 					<Route path="/login" element={<LoginScreen />} />
 					<Route
@@ -35,8 +39,10 @@ function App() {
 				</Routes>
 
 				<Footer />
+			
 			</BrowserRouter>
 		</CartProvider>
+		</section>
 	);
 }
 

@@ -10,7 +10,7 @@ export const ButtonAdd = ({cantidad, setCantidad, stock, agregar}) => {
 		cantidad < stock && setCantidad(cantidad + 1);
 	};
 	const handleDisminuir = () => {
-		setCantidad(cantidad ? cantidad - 1 : 1);
+		setCantidad(cantidad > 1 ? cantidad - 1 : 1);
 	};
 
 	// const agregarCarrito = () => {
@@ -24,8 +24,9 @@ export const ButtonAdd = ({cantidad, setCantidad, stock, agregar}) => {
 		<>
 			<div className="container inline-flex flex-wrap">
 				<input
-					className="border-2 w-10 justify-center"
+					className={cantidad === 1 ? "border-2 w-10 justify-center btn-disabled" : "border-2 w-10 justify-center"}
 					type="button"
+					disabled={cantidad === 1}
 					value="-"
 					onClick={handleDisminuir}
 				/>
@@ -36,8 +37,9 @@ export const ButtonAdd = ({cantidad, setCantidad, stock, agregar}) => {
 					onChange={handleAumentar || handleDisminuir} value={cantidad}
 				/>
 				<input
-					className="border-2 w-10 justify-center"
+					className={cantidad === stock ? "border-2 w-10 justify-center btn-disabled":"border-2 w-10 justify-center"}
 					type="button"
+					disabled={cantidad === stock}
 					value="+"
 					onClick={handleAumentar}
 				/>

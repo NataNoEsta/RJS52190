@@ -20,7 +20,7 @@ const ItemDetailContainer = () => {
     },[])
 
     return (
-        <div className="item__container container bg-white py-10 flex flex-row flex-wrap justify-center max-w-6xl">
+        <div className="item__container container bg-white py-8 flex flex-row flex-wrap justify-center max-w-6xl">
         {
             loading
                 ? <h1 className="animate-pulse text-center font-bold text-2xl">cargando...</h1>

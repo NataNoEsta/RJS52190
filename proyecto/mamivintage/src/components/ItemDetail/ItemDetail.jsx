@@ -35,7 +35,7 @@ const ItemDetail = ({ item }) => {
 	};
 
 	return (
-		<section className="item-detail-card max-w-full flex flex-wrap justify-center m-auto pb-8">
+		<section className="item-detail-card container m-auto align-top mnax-w-full pb-8">
 			<article className="left_side w-1/2 flex flex-wrap">
 				<figure>
 					<img
@@ -62,7 +62,7 @@ const ItemDetail = ({ item }) => {
 					Precio: ${precio}
 				</p>
 				<p className="text-base py-2">Varantes: </p>
-				<div className="buttons container flex flex-col w-2">
+				<div className="buttons container flex flex-col">
 					<SkuVariation setVariant={setVariant} options={variants} />
 					{itemRepeat(id) ? (
 						<Link className="btn__add" to="/cart">

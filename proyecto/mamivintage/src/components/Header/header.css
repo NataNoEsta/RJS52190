@@ -1,13 +1,20 @@
 .header__container {
-  height: auto;
+  margin: 0;
   overflow-y: hidden !important;
 }
 .header__container h1 {
   text-align: center;
   text-transform: lowercase;
   font-family: "Meddon", cursive;
-  font-size: 5rem;
+  font-size: 4.5rem;
   color: #f4dafc;
   text-overflow: ellipsis;
   text-shadow: 0 1px 8px #c7dbe0;
+}
+
+@media (max-width: 760px) {
+  h1 {
+    font-size: 3.5rem;
+    line-height: 1;
+  }
 }/*# sourceMappingURL=header.css.map */

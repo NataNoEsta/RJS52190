@@ -12,7 +12,7 @@
 .cart_icon__container .cart-icon .nav-link {
   display: inline-flex;
 }
-.cart_icon__container .cart-icon .nav-link p {
+.cart_icon__container .cart-icon .nav-link .cart-items {
   font-weight: 400;
   font-size: 0.8rem;
   width: 20px;
@@ -20,4 +20,7 @@
   height: 20px;
   border-radius: 50%;
   background-color: red;
+}
+.cart_icon__container .cart-icon .nav-link .cart-items-none {
+  visibility: hidden;
 }/*# sourceMappingURL=cartwidget.css.map */
