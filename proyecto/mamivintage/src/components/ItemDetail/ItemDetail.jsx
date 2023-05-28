@@ -1,4 +1,4 @@
-import { useContext, useState, useEffect } from "react";
+import { useContext, useState } from "react";
 import { ButtonAdd } from "../ButtonAdd/ButtonAdd";
 import "./itemDetail.scss";
 import { Link } from "react-router-dom";
@@ -6,7 +6,7 @@ import SkuVariation from "./SkuVariation";
 import { CartContext } from "../context/CartContext";
 
 const ItemDetail = ({ item }) => {
-	const { agregarCarrito, itemRepeat, cart } = useContext(CartContext);
+	const { agregarCarrito, itemRepeat } = useContext(CartContext);
 
 	itemRepeat(item.id);
 
@@ -56,18 +56,25 @@ const ItemDetail = ({ item }) => {
 					{nombre}
 				</h1>
 				<p className="text-base py-2">{long_descripcion}</p>
-				<p className="text-base py-2">Talle: {talle}</p>
+				{
+					talle !== "-" ? <p className="text-base py-2">Talle: {talle}</p> : <p className="hidden"></p>
+				}
+				
+				
 				<p className="text-base font-semibold py-2">
 					Precio: ${precio}
 				</p>
-				<p className="text-base py-2">Varantes: </p>
+				<p className="text-base py-2">Variantes: </p>
 				<div className="buttons container flex flex-col">
 					<SkuVariation setVariant={setVariant} options={variants} />
-					{itemRepeat(id) ? (
+					{
+					itemRepeat(id) 
+					? (
 						<Link className="btn__add" to="/cart">
 							Ir al carrito
 						</Link>
-					) : (
+					) 
+					: (
 						<ButtonAdd
 							cantidad={cantidad}
 							setCantidad={setCantidad}
