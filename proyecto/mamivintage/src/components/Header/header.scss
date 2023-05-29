@@ -7,7 +7,7 @@
         text-align:center;
         text-transform: lowercase;
         font-family: 'Meddon', cursive;
-        font-size: 4.5rem !important;
+        font-size: 4.5rem;
         color: #f4dafc;
         line-height: 1.5;
         text-overflow: ellipsis;
@@ -15,9 +15,8 @@
         
     }
 }
-@media (max-width: 760px) {
+@media (max-width: 768px) {
     h1 {
-        font-size: 3.5rem;
-        line-height: 1;
+        font-size: 3rem !important;
     }
 }

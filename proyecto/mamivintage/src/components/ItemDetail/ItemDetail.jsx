@@ -3,7 +3,7 @@ import { ButtonAdd } from "../ButtonAdd/ButtonAdd";
 import "./itemDetail.scss";
 import { Link } from "react-router-dom";
 import SkuVariation from "./SkuVariation";
-import { CartContext } from "../context/CartContext";
+import { CartContext } from "../../context/CartContext";
 
 const ItemDetail = ({ item }) => {
 	const { agregarCarrito, itemRepeat } = useContext(CartContext);

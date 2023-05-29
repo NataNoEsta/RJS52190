@@ -25,9 +25,9 @@ const Contacto = () => {
 	
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		const ahora = new Date()
+		const fecha = new Date()
+		const ahora = fecha.getDate().toLocaleString()
 		console.log(e);
-		ahora.toLocaleDateString()
 	};
     
 	return (
@@ -45,7 +45,7 @@ const Contacto = () => {
 						placeholder="nombre"
 						value={values.nombre}
 						onChange={handleForm}
-					/>
+					></input>
 					<label>Email</label>
 					<input 
 						name="email"
@@ -54,7 +54,7 @@ const Contacto = () => {
 						placeholder="email"
 						value={values.email}
                         onChange={handleForm}
-					/>
+					></input>
 					<label>Comentarios</label>
 					<textarea
 						name="coment"

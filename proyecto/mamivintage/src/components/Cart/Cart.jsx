@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import "./cart.scss";
 import { FiTrash2 } from "react-icons/fi";
-import { CartContext } from "../context/CartContext";
+import { CartContext } from "../../context/CartContext";
 
 const Cart = () => {
 	const { cart, vaciarCarrito, totalizador, removeCarrito } =
