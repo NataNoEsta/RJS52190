@@ -15,7 +15,7 @@ const CategoryNavbar = () => {
 					<Link to="shop/camisas" className="nav-link active">
 						Camisas
 					</Link>
-					<Link to="shop/calzado" className="nav-link active">
+					<Link to="shop/calzados" className="nav-link active">
 						Calzados
 					</Link>
 					<Link to="shop/accesorios" className="nav-link active">

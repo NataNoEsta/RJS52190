@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import "./cart.scss";
+import { Link } from "react-router-dom";
 import { FiTrash2 } from "react-icons/fi";
 import { CartContext } from "../../context/CartContext";
 
@@ -55,6 +56,12 @@ const Cart = () => {
 					>
 						Vaciar carrito
 					</button>
+					<Link to="/checkout"
+						className="border-pink-300 px-4 pt-2 text-center"
+						
+					>
+						Ir al checkout
+					</Link>
 				</div>
 			</>
 		)

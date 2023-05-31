@@ -35,7 +35,7 @@ const ItemDetail = ({ item }) => {
 	};
 
 	return (
-		<section className="item-detail-card container m-auto align-top mnax-w-full pb-8">
+		<section className="item-detail-card container m-auto align-top mnax-w-full">
 			<article className="left_side w-1/2 flex flex-wrap">
 				<figure>
 					<img
@@ -72,7 +72,7 @@ const ItemDetail = ({ item }) => {
 					itemRepeat(id) 
 					? (
 						<Link className="btn__add" to="/cart">
-							Ir al carrito
+							Ver mi compra
 						</Link>
 					) 
 					: (

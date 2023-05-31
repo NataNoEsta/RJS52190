@@ -1,11 +1,8 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut, signInWithPopup } from "firebase/auth";
+import { auth, provider } from "../firebase/config";
 
 export const AuthContext = createContext()
-
-const mock = {
-    email: 'shotaoouji@gmail.com',
-    password: 'abcd1234'
-}
 
 export const AuthProvider = ({children}) => {
 
@@ -13,21 +10,71 @@ export const AuthProvider = ({children}) => {
         email: null,
         logged: false
     })
-    console.log(user) 
+    console.log("logged") 
 
     const login = (values) => {
-        if((values.email === mock.email) && (values.password === mock.password)){
-            setUser({
-                email: values.email,
-                logged: true
-            })
-        }  
+       signInWithEmailAndPassword(auth, values.email, values.password)
+            // .then((userCredential) => {
+            //     const { user } = userCredential
+            //     setUser({
+            //         email: user.email,
+            //         logged: true
+            //     })
+            //  })
+            .catch((err) => console.log(err))
     }  
 
+    const register = (values) => {
+        // retorna una PROMESA del tipo userCredential(obj)
+        createUserWithEmailAndPassword(auth, values.email, values.password)
+            // .then((userCredential)=> {
+            //    console.log(userCredential) 
+            //    // por desestructuracion obtenemos los datos para login
+            //    const { user } = userCredential
+
+            //    setUser({
+            //         email: user.email,
+            //         logged: true
+            //    })
+            // }) 
+            .catch((err) => console.log(err.message))
+    }
+    const loginWithGoogle = () => {
+        signInWithPopup(auth, provider)
+            .then((res) => {
+                console.log(res)
+            })
+            .catch((err)=> console.log(err))
+    }
+    useEffect(() => {
+        onAuthStateChanged( auth, (user) => {
+            console.log(user)
+            try {
+                user 
+                    ? setUser({
+                        email: user.email,
+                        logged: true
+                    })
+                    : setUser({
+                        email: null,
+                        logged:false
+                    })
+            }catch (error) {
+                console.log(error)
+            }
+        })
+    },[])
+
+    const logout = () => {
+       signOut(auth)
+    }
     return (
         <AuthContext.Provider value={{
             user,
-            login
+            login,
+            logout,
+            register,
+            loginWithGoogle
         }}>
              {children}
         </AuthContext.Provider>  

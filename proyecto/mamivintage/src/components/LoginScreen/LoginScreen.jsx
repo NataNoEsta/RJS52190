@@ -1,42 +1,50 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
+import Error404 from "../Error404";
 
 const LoginScreen = () => {
-
-	const { login } = useContext(AuthContext)
-
+	const { login, loginWithGoogle, user } = useContext(AuthContext);
+	const navigate = useNavigate();
 	const [values, setValues] = useState({
-		email: '',
-		password: ''
-	})
-	
+		email: "",
+		password: "",
+	});
+
 	const handleInput = (e) => {
 		setValues({
 			...values,
-			[e.target.name]: e.target.value
-		})
-	}
+			[e.target.name]: e.target.value,
+		});
+	};
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		login(values)
-		console.log(values)
+		setTimeout(()=> {
+			login(values)
+			if(user.logged){
+				navigate("/")
+			}
+		},2000);
+		
+		console.log(values);
 	};
+	
 	return (
 		<>
-			<section className="container w-full flex-col max-w-lg justify-center align-middle">
+			<section className="container flex w-full flex-col max-w-lg justify-center align-middle m-auto bg-red-100 p-8 rounded-lg">
 				<h2>Login</h2>
 				<div className="w-full max-w-lg">
-					<form className="flex flex-col" 
+					<form
+						className="flex flex-col"
 						onSubmit={handleSubmit}>
-				
 						<input
 							type="email"
 							placeholder="email"
 							name="email"
 							value={values.email}
 							onChange={handleInput}
-							className="form-input border border-pink-400" />
+							className="form-input border border-pink-400"
+						/>
 						<label>password</label>
 						<input
 							type="password"
@@ -44,19 +52,28 @@ const LoginScreen = () => {
 							name="password"
 							value={values.password}
 							onChange={handleInput}
-							className="form-input border border-pink-400" />
+							className="form-input border border-pink-400"
+						/>
 						<button
 							type="submit"
-							className="border bg-blue-200 border-blue-300 mt-6 py-2 rounded-lg focus:outline-none"
-							>
+							className="btn-login-form">
 							Ingresar
 						</button>
-						<Link to="/register"
-							className="border bg-blue-100 border-blue-200 mt-3 py-2 rounded-lg text-center focus:outline-none">
+					
+						</form>
+					<div className="container flex flex-row w-full gap-2">
+						<Link
+							to="/register"
+							className="btn-register">
 							Registrate
 						</Link>
-					</form>
-					
+						<button
+							type="button"
+							onClick={loginWithGoogle}
+							className="btn-login-form">
+							Ingresar con google
+						</button>
+					</div>
 				</div>
 			</section>
 		</>

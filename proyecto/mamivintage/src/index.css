@@ -22,4 +22,10 @@
     .form-input {
         @apply px-2 py-2 rounded-lg focus:outline-none;
     }
+    .btn-login-form {
+        @apply border bg-blue-200 border-blue-300 mt-2 py-2 px-4 rounded-lg w-full focus:outline-none hover:bg-blue-400 hover:text-gray-50;
+    }
+    .btn-register {
+        @apply border bg-blue-100 border-blue-200 mt-2 py-2 px-4 rounded-lg w-full text-center focus:outline-none hover:bg-blue-200 hover:text-gray-50;
+    }
 }

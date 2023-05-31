@@ -4,6 +4,7 @@
     min-height: 500px;
     flex-direction: row;
     flex-wrap: wrap;
+    padding-bottom: 5rem !important;
 
     .left_side {
         float: left;
@@ -35,6 +36,7 @@
         padding: 1rem;
         float: right;
         justify-content: center;
+        height: auto;
 
         p, h3 {
             line-height: 1.5;
