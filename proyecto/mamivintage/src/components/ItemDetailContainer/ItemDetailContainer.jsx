@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom"
 import ItemDetail from "../ItemDetail/ItemDetail"
 import { db } from "../../firebase/config"
 import { doc, getDoc } from "firebase/firestore"
+import Loader from "../Loader/Loader"
 
 const ItemDetailContainer = () => {
     
@@ -36,7 +37,7 @@ const ItemDetailContainer = () => {
         <div className="item__container container bg-white py-8 flex flex-row flex-wrap justify-center max-w-6xl">
         {
             loading
-                ? <h1 className="animate-pulse text-center font-bold text-2xl">cargando...</h1>
+                ? <Loader/>
                 : <ItemDetail item={item} key={item.id}/>
         }
     </div>

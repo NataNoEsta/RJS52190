@@ -1,24 +1,65 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { CartContext } from "../../context/CartContext";
 
 export const Checkout = () => {
-
+const {cart, totalCantidad, totalizador } = useContext(CartContext)
     const [values, setValues] = useState({
         nombre: "",
         direccion: "",
         email: ""
     })
 
+    // const user = {
+    //     nombre: "",
+    //     edad: null
+    // }
+    // const prop = user
+    // // [] -> selector dinamico
+    // user[prop] = ["fernando", 12]
+    // console.log(user[prop])
     const handleInput = (e) => {
-        console.log("")
+       
         setValues({
             ...values,
             [e.target.name]: e.target.value
         })
     }
+    const cartItemsMap = () => {
+		return(
+			cart.map((item) => (
+				{id: item.id,
+				nombre: item.nombre,
+				variante: item.variant,
+				precio: item.precio,
+				cantidad: item.cantidad}
+			))
+		)
+	}
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log(e)
+        // console.log(e)
+
+		const { nombre, direccion, email} = values
+
+		if(nombre.length < 5) {
+			alert("nombre demasiado corto")
+			return
+		}
+		let dire = direccion.split(' ')
+	console.log(dire.length)
+		if(dire.length < 2) {
+			alert("direccion invalida")
+			return
+		}
+
+		const orden = {
+			client: values, 
+			items: cartItemsMap(),
+			toalCompra: totalizador(),
+			timeStamp: new Date().toLocaleString()
+		}
+		console.log("orden: ",orden)
     }
 
     return (

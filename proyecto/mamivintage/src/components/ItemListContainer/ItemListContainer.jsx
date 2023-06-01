@@ -5,6 +5,7 @@ import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../../firebase/config";
+import Loader from "../Loader/Loader";
 
 const ItemListContainer = () => {
 
@@ -64,11 +65,7 @@ const ItemListContainer = () => {
 			<section className="item__container container bg-white gap-4 py-10 m-auto flex flex-row flex-wrap justify-start max-w-6xl">
 				{
 					loading
-						? <div className="loader h-full m-auto">
-							<h1 className="animate-pulse font-bold text-2xl">
-								cargando...
-							</h1>
-						</div>
+						? <Loader />
 						: <ItemList items={productos} />
 				}
 			</section>

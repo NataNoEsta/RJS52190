@@ -8,11 +8,10 @@
 }
 .navbar__container .container-fluid {
   display: flex;
-  position: relative;
   align-items: center;
 }
 .navbar__container .container-fluid .hover-msg {
-  font-size: 0.75rem;
+  font-size: 0.68rem;
   width: -moz-fit-content;
   width: fit-content;
   color: rgb(116, 116, 116);
@@ -21,11 +20,11 @@
   line-height: 1;
   padding: 5px;
   border-radius: 5px;
-  position: fixed;
+  position: absolute;
   top: 0;
-  right: 250px;
+  right: 20%;
   opacity: 0.2;
-  display: block;
+  display: flex;
 }
 .navbar__container .container-fluid .hover-msg:hover {
   opacity: 1;

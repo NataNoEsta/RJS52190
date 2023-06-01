@@ -8,6 +8,11 @@ import { AuthContext } from "../../context/AuthContext";
 const Navbar = () => {
 
 	const { user, logout } = useContext(AuthContext)
+	function getnickname() {
+		let name = user.email
+		name = name.split('@')
+		return name[0]
+	}
 
 	return (
 		<nav className="navbar__container">
@@ -37,7 +42,7 @@ const Navbar = () => {
 						!user 
 							? <Link to="login" className="nav-link">Login</Link>
 							:<>
-								<p className="hover-msg">Bienvenido {user.email}</p>
+								<p className="hover-msg">Bienvenido {getnickname()}</p>
 								<button className="nav-link" onClick={logout}>Logout</button>
 							</>
 					}

@@ -8,11 +8,10 @@
 
 	.container-fluid{
 		display: flex;
-		position: relative;
 		align-items: center;
 
 		.hover-msg {
-			font-size: .75rem;
+			font-size: .68rem;
 			width: fit-content;
 			color: rgb(116, 116, 116);
 			background-color: paleturquoise;
@@ -20,11 +19,11 @@
 			line-height: 1;
 			padding: 5px;
 			border-radius: 5px;
-			position: fixed;
+			position: absolute;
 			top: 0;
-			right: 250px;
+			right: 20%;
 			opacity: 0.2;
-			display: block;	
+			display: flex;	
 		}
 		.hover-msg:hover{
 			opacity: 1;
