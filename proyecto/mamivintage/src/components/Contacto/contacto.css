@@ -1,0 +1,29 @@
+*, ::before, ::after {
+  border-color: pink;
+}
+
+.container_contacto {
+  display: flex;
+  padding-top: 2rem;
+  justify-items: center;
+  align-items: center;
+}
+.container_contacto form {
+  font-family: "Consolas", sans-serif;
+}
+.container_contacto form input {
+  width: 500px !important;
+  max-width: 100%;
+  border: 1px solid pink;
+}
+.container_contacto form input .form {
+  padding: 0 10px;
+  max-width: 100%;
+  border: 1px solid rgb(255, 167, 167);
+}
+.container_contacto form button {
+  border: 1px solid rgb(255, 192, 203) !important;
+  margin-top: 1rem;
+  min-width: 500px !important;
+  max-width: 100%;
+}/*# sourceMappingURL=contacto.css.map */

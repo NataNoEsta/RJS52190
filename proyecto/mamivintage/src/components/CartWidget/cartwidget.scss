@@ -1,17 +1,32 @@
 .cart_icon__container {
     display: flex;
     flex-direction: row;
-    padding-right: 20px;
+
 
     .cart-icon{
-        display: flex;
+        line-height: 1.2;
         justify-content: center;
-        
-        img {
-            max-width: 30px;
-            height:30px;
-            align-self: center;
-           
+        font-size: 1.4rem;
+        color: white;
+        cursor: pointer;
+
+        .nav-link{
+            display: inline-flex;
+            
+            .cart-items{
+                font-weight: 400;
+                font-size: 0.8rem;
+                width: 20px;
+                text-align: center;
+                height: 20px;
+                border-radius: 50%;
+                background-color: red;
+                
+            }
+            .cart-items-none {
+                visibility: hidden;
+            }
         }
+            
     }
 }
