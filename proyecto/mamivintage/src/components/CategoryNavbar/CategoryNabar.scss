@@ -10,5 +10,33 @@
         color: salmon;
         border-radius: 25px;
         padding: 4px 12px;
+        transition: all ease-in-out .3s;
+
+    }
+    .nav-link:hover {
+        color: white;
+        background-color: rgb(221, 186, 192);
+        border-radius: 0;
+    }
+    .nav-link:focus {
+        background-color: salmon;
+        color: whitesmoke;
+    }
+}
+@media(max-width: 768px) {
+    .categoryNavc {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+    }
+    .category-links {
+        height: 10px;
+        flex-direction: column;
+        max-width: 100%;
+        flex-wrap: wrap;
+       
+        .nav-link{
+            border: none;
+        }
     }
 }

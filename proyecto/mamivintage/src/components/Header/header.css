@@ -16,7 +16,8 @@
 }
 
 @media (max-width: 768px) {
-  h1 {
-    font-size: 3rem !important;
+  .header__container .title-header {
+    line-height: 2;
+    font-size: 3rem;
   }
 }/*# sourceMappingURL=header.css.map */

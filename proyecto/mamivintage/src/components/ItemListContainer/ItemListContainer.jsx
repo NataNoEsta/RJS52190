@@ -1,14 +1,15 @@
 import "./ItemListContainer.scss";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { pedirDatos } from "../../helpers/pedirDatos";
 import ItemList from "../ItemList/ItemList";
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../../firebase/config";
 import Loader from "../Loader/Loader";
+import { AuthContext } from "../../context/AuthContext"
 
 const ItemListContainer = () => {
-
+	const { user, logged } = useContext(AuthContext); 
 	// const [, searchParams] = useSearchParams()
 	const [productos, setProductos] = useState([]);
 	const [loading, setLoading] = useState(true);
@@ -59,6 +60,12 @@ const ItemListContainer = () => {
 		// 		setLoading(false);
 		// 	});
 	}, [category]);
+
+	if(!logged){
+		<Navigate to="/login" />
+	} else{
+		return
+	}
 
 	return (
 		<>

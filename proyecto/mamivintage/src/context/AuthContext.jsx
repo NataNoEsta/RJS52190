@@ -6,10 +6,20 @@ export const AuthContext = createContext()
 
 export const AuthProvider = ({children}) => {
 
-    const [user, setUser] = useState({
-        email: null,
-        logged: false
-    })
+    const [user, setUser] = useState(() => {
+        try {
+            const userid = localStorage.getItem('userid');
+            return userid ? localStorage.setItem(userid) : {}
+        }catch (error) {
+            return {
+                user: "",
+                logged: false
+            }
+        }
+    });
+    useEffect(() => {
+        localStorage.setItem('userid', JSON.stringify(user))
+    },[user])
     console.log("logged") 
 
     const login = (values) => {
@@ -21,7 +31,7 @@ export const AuthProvider = ({children}) => {
             //         logged: true
             //     })
             //  })
-            .catch((err) => console.log(err))
+            .catch((err) => console.log(err.message))
     }  
 
     const register = (values) => {

@@ -23,29 +23,30 @@ export const ButtonAdd = ({ cantidad, setCantidad, stock, agregar }) => {
 	return (
 		<>
 			<div className="container inline-flex flex-wrap">
-				<input
+				<div className="stepper"><input
 					className={
 						cantidad === 1
-							? "border-2 w-10 justify-center btn-disabled"
-							: "border-2 w-10 justify-center"
+							? "w-10 btn-disabled cursor-not-allowed"
+							: "w-10 justify-center"
 					}
 					type="button"
 					disabled={cantidad === 1}
 					value="-"
 					onClick={handleDisminuir}
 				/>
-				<span className="border-pink-300 px-4 pt-2 text-center">{cantidad}</span>
+				<span className="px-4 pt-2 text-center">{cantidad}</span>
 				<input
 					className={
 						cantidad === stock
-							? "border-2 w-10 justify-center btn-disabled"
-							: "border-2 w-10 justify-center"
+							? "w-10 btn-disabled cursor-not-allowed"
+							: "w-10 justify-center"
 					}
 					type="button"
 					disabled={cantidad === stock}
 					value="+"
 					onClick={handleAumentar}
 				/>
+				</div>
 				<button
 					className="btn__add w-fit"
 					onClick={agregar}>

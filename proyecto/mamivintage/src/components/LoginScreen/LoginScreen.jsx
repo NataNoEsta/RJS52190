@@ -1,11 +1,12 @@
 import { useContext, useState } from "react";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import Error404 from "../Error404";
 
 const LoginScreen = () => {
+	const [ loading, setLoading] = useState(true)
+
 	const { login, loginWithGoogle, user } = useContext(AuthContext);
-	const navigate = useNavigate();
 	const [values, setValues] = useState({
 		email: "",
 		password: "",
@@ -22,9 +23,13 @@ const LoginScreen = () => {
 		setTimeout(()=> {
 			login(values)
 			if(user.logged){
-				navigate("/")
+				return (<Navigate to="/"/>)
 			}
-		},2000);
+			else{
+				alert("Usuario y/o contraseña incorrectos")
+				return
+			}
+		},1000);
 		
 		console.log(values);
 	};

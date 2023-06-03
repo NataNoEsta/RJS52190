@@ -9,7 +9,7 @@ function App() {
 		<section className="Main">
 			<AuthProvider>
 				<CartProvider>
-					<AppRouter></AppRouter>
+					<AppRouter />
 				</CartProvider>
 			</AuthProvider>
 		</section>

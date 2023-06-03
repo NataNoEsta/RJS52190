@@ -80,6 +80,7 @@ const ItemDetail = ({ item }) => {
 							cantidad={cantidad}
 							setCantidad={setCantidad}
 							stock={stock}
+							variant={setVariant}
 							agregar={handleAdd}
 						/>
 					)}

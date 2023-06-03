@@ -1,22 +1,26 @@
 .header__container {
-    margin: 0;
-    min-height: fit-content;
-    overflow-y: hidden !important;
+	margin: 0;
+	min-height: fit-content;
+	overflow-y: hidden !important;
 
-    .title-header {
-        text-align:center;
-        text-transform: lowercase;
-        font-family: 'Meddon', cursive;
-        font-size: 4.5rem;
-        color: #f4dafc;
-        line-height: 1.5;
-        text-overflow: ellipsis;
-        text-shadow:0 1px 8px #c7dbe0;
-        
-    }
+	.title-header {
+		text-align: center;
+		text-transform: lowercase;
+		font-family: "Meddon", cursive;
+		font-size: 4.5rem;
+		color: #f4dafc;
+		line-height: 1.5;
+		text-overflow: ellipsis;
+		text-shadow: 0 1px 8px #c7dbe0;
+	}
 }
 @media (max-width: 768px) {
-    h1 {
-        font-size: 3rem !important;
-    }
+	.header__container {
+
+		.title-header {
+                line-height: 2;
+				font-size: 3rem;
+			
+		}
+	}
 }

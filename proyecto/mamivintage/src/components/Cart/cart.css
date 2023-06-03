@@ -1,5 +1,60 @@
+.container_cart {
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-content: center;
+}
 .container_cart .itemcard_cart {
-  width: 52rem;
-  max-width: 100%;
+  display: flex;
+  width: 100%;
   align-self: center;
+}
+.container_cart .btn-remove {
+  margin-bottom: 0.1rem;
+  border: 1px solid red;
+  color: red;
+  transition: all ease-out 0.2s;
+}
+.container_cart .btn-remove:hover {
+  background-color: red;
+  color: white;
+}
+.container_cart .btn-remove:focus {
+  border: 1px solid rgb(194, 65, 65);
+}
+.container_cart .btn-check {
+  transition: all ease-in 0.2s;
+}
+.container_cart .btn-check:hover {
+  background-color: pink;
+  color: white;
+}
+.container_cart .btn-check:focus {
+  background-color: red;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .container_cart {
+    width: 100%;
+    overflow: hidden;
+    display: grid;
+    align-content: center;
+  }
+  .container_cart .itemcard_cart {
+    height: -moz-max-content;
+    height: max-content;
+    display: grid;
+    grid-template-columns: 115px 2fr 1fr;
+  }
+  .container_cart .itemcard_cart .btn-remove {
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    min-height: 22px;
+    margin: auto;
+  }
+  .container_cart h1 {
+    font-size: 1.2rem !important;
+  }
 }/*# sourceMappingURL=cart.css.map */

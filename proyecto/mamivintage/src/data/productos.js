@@ -2,7 +2,7 @@ const product_data = [
   {
     id: 1,
     nombre: "Sweater cubismo",
-    imagen: "/src/assets/prenda (1).png",
+    imagen: "/assets/prenda (1).png",
     descripcion: "Sweater geométrico",
     long_descripcion: "Sweater de lana blanco con diseños geométricos",
     precio: 1200.00,
@@ -20,7 +20,7 @@ const product_data = [
   {
     id: 2,
     nombre: "Camisa a rayas",
-    imagen: "/src/assets/prenda (14).png",
+    imagen: "/assets/prenda (14).png",
     descripcion: "Camisa clásica a rayas",
     long_descripcion: "Camisa clásica de poliéster y algodón a rayas unisex",
     precio: 1670.00,
@@ -50,7 +50,7 @@ const product_data = [
   {
     id: 3,
     nombre: "Sweater Rombos",
-    imagen: "/src/assets/prenda (3).png",
+    imagen: "/assets/prenda (3).png",
     descripcion: "Sweater Rombos",
     long_descripcion: "Sweater grande, con diseño clásico de rombos, de lana y algodón",
     precio: 2500.00,
@@ -76,7 +76,7 @@ const product_data = [
   {
     id: 4,
     nombre: "Saco oranges",
-    imagen: "/src/assets/prenda (4).png",
+    imagen: "/assets/prenda (4).png",
     descripcion: "Saco de lana con diseño",
     long_descripcion: "Saco talle S de lana, tejido a mano, con diseño de naranjas.",
     precio: 3499.99,
@@ -101,7 +101,7 @@ const product_data = [
   {
     id: 5,
     nombre: "Saco corazones",
-    imagen: "/src/assets/prenda (7).png",
+    imagen: "/assets/prenda (7).png",
     descripcion: "Saco de lana con diseño",
     long_descripcion: "Saco blanco de lana y algodón, tejido a mano, con diseño de corazones, y bolsillos. Cuello tipo camisero en rib de algodón",
     precio: 3100.00,
@@ -122,7 +122,7 @@ const product_data = [
   {
     id: 6,
     nombre: "Campera bomber",
-    imagen: "/src/assets/prenda (5).png",
+    imagen: "/assets/prenda (5).png",
     descripcion: "Campera de jean tipo bomber",
     long_descripcion: "Campera combinada, diseño tipo bomber jacket. Cuerpo de denim rígido y mangas de buzo rústico con detalles de rib a rayas en puños y cuello",
     precio: 3199.99,
@@ -144,7 +144,7 @@ const product_data = [
   {
     id: 7,
     nombre: "Cardigan corazones",
-    imagen: "/src/assets/prenda (6).png",
+    imagen: "/assets/prenda (6).png",
     descripcion: "Cardigan rosa con corazones",
     long_descripcion: "Cárdigann en tejido sintético, variante crudo con detalles de corazones en rosado.",
     precio: 2799.09,
@@ -169,7 +169,7 @@ const product_data = [
   {
     id: 8,
     nombre: "Sweater retro",
-    imagen: "/src/assets/prenda (10).png",
+    imagen: "/assets/prenda (10).png",
     descripcion: "Sweater retro con corazones",
     long_descripcion: "Sweater retro con corazones, en lana natural. Tejido pesao y abrigado. Talle amplio",
     precio: 2300.00,
@@ -190,7 +190,7 @@ const product_data = [
   {
     id: 9,
     nombre: "Campera Jean",
-    imagen: "/src/assets/prenda (15).png",
+    imagen: "/assets/prenda (15).png",
     descripcion: "Campera de jean",
     long_descripcion: "Campera de jean abrigada, con corderito sintético en su interior",
     precio: 1999.99,
@@ -208,7 +208,7 @@ const product_data = [
   {
     id: 10,
     nombre: "Aros",
-    imagen: "/src/assets/prenda (17).png",
+    imagen: "/assets/prenda (17).png",
     descripcion: "Aros con baño en plata",
     long_descripcion: "Aros con baño en plata 925, con detalles en esmaltado",
     precio: 1099.99,
@@ -230,7 +230,7 @@ const product_data = [
   {
     id: 11,
     nombre: "Zapatos dama",
-    imagen: "/src/assets/pprenda (6).png",
+    imagen: "/assets/pprenda (6).png",
     descripcion: "Zapatos bajos de dama",
     long_descripcion: "Zapatos taco bajo de dama, con detalle de moño",
     precio: 2000.00,
@@ -252,7 +252,7 @@ const product_data = [
   {
     id: 12,
     nombre: "Camisa wild",
-    imagen: "/src/assets/prenda (9).png",
+    imagen: "/assets/prenda (9).png",
     descripcion: "Camisa estampada",
     long_descripcion: "Camisa estampada unisex, marca Gucci original",
     precio: 4269.99,
@@ -269,7 +269,7 @@ const product_data = [
   },
   {id: 13,
   nombre: "Zapatos mocasín",
-  imagen: "/src/assets/pprenda (3).png",
+  imagen: "/assets/pprenda (3).png",
   descripcion: "Zapatos mocasín",
   long_descripcion: "Zapatos tipo mocasines de dama con taco medio",
   precio: 1999.99,

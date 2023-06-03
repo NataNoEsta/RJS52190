@@ -12,7 +12,6 @@ import RegisterScreen from "../components/LoginScreen/RegisterScreen";
 import { AuthContext } from "../context/AuthContext";
 import { Checkout } from "../components/Checkout/Checkout";
 import { useContext } from "react";
-import Error404 from "../components/Error404";
 
 const AppRouter = () => {
 
@@ -30,7 +29,7 @@ const AppRouter = () => {
 					<CategoryNavbar />
 					<Header />
 					<Routes>
-						<Route path="/" index element={<ItemListContainer />} />
+						<Route path="/" element={<ItemListContainer />} />
 						<Route path="/shop/:category" element={<ItemListContainer />}/>
 						<Route path="/cart?/checkout" element={<Checkout />}/>
 						<Route path="/contacto" element={<Contacto />} />

@@ -11,4 +11,8 @@ footer section .main_row {
 }
 footer section .main_row .footer_column {
   margin: 0;
+}
+footer li {
+  color: white;
+  font-family: "Consolas", sans-serif, monospace;
 }/*# sourceMappingURL=footer.css.map */
