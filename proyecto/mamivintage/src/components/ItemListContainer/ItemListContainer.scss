@@ -1,12 +1,16 @@
 .item__container {
-    display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    
+    margin-top: 0 !important;
+    align-content: flex-start;
+    justify-content: flex-start;
+    min-height: 100%;
+
+    .loader {
+        max-height: 100vh;
+    }
     h3 {
-        font-size: 2rem;
+        font-size: 1.2rem;
 
     }
     ul {
@@ -15,9 +19,9 @@
     }
     .image__container {
         display: flex;
-
+       
         .item-image {
-            max-width: 400px;
+            max-width: 100%;
             padding: 10px;
             margin: auto;
         }

@@ -1,0 +1,33 @@
+*, ::before, ::after {
+	border-color: pink;
+}
+.container_contacto {
+	display: flex;
+	padding-top: 2rem;
+	justify-items: center;
+	align-items: center;
+
+	form {
+		
+		font-family: "Consolas", sans-serif;
+		input {
+			width: 500px !important;
+			max-width: 100%;
+			border: 1px solid pink;
+	
+			.form {
+				padding: 0 10px;
+				max-width: 100%;
+				border: 1px solid rgb(255, 167, 167);
+
+			}
+
+		}
+		button {
+			border: 1px solid rgb(255, 192, 203) !important;
+			margin-top: 1rem;
+			min-width: 500px !important;
+			max-width: 100%;
+		}
+	}
+}

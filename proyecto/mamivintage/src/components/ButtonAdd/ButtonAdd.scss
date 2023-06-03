@@ -1,15 +1,54 @@
 .container {
-	display: inline-flex;
-    justify-content: center;
-    margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
 
-    input {
-        border: 1px solid pink;
-        text-align: center;
-    }
-	.btn__add {
-        padding: .2rem 2.35rem;
-        border-radius: 12px;
+	.stepper {
+		position: relative;
 		border: 1px solid pink;
+		border-radius: 25px;
+
+		.btn-disabled {
+			border: 1px solid rgb(219, 219, 219);
+			background-color: rgb(218, 218, 218);
+			color: rgb(197, 191, 191);
+			padding: 2px 0;
+		}
+        .btn-disabled:hover {
+            border: 1px solid rgb(219, 219, 219);
+			background-color: rgb(218, 218, 218);
+			color: rgb(197, 191, 191);
+            cursor: not-allowed;
+        }
+		input {
+			text-align: center;
+			font-weight: 600;
+		}
+		input[type="button"] {
+			cursor: pointer;
+			border-radius: 25px;
+			font-weight: bold;
+		}
+	}
+
+	.btn__add {
+		font-size: 0.8rem;
+		text-transform: none;
+		font-weight: 600;
+		padding: 0.3rem 2.4rem !important;
+		border-radius: 10px !important;
+		border: 1px solid pink;
+	}
+
+	.btn__add:focus {
+		outline: none;
+	}
+
+	.btn__add:hover,
+	input[type="button"]:hover {
+		background-color: rgb(236, 163, 175, 0.5);
+		color: white;
+        padding: 2px 0;
+		box-shadow: 0 1px 4px rgba(94, 94, 94, 0.2);
 	}
 }

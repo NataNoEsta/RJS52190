@@ -1,25 +1,53 @@
 .navbar__container {
-	min-width: 100vw;
-	position: sticky;
+	max-width: 100%;
 	display: flex;
-	z-index: 1;
+	padding: 1rem 0;
 	background-color: rgb(242, 142, 255) !important;
     justify-content: space-between;
+	align-items: center;
 
-	.container-fluid {
+	.container-fluid{
 		display: flex;
-		padding: 1rem;
+		align-items: center;
 
-		a {
+		.hover-msg {
+			font-size: .68rem;
+			width: fit-content;
+			color: rgb(116, 116, 116);
+			background-color: paleturquoise;
+			text-align: center;
+			line-height: 1;
+			padding: 5px;
+			border-radius: 5px;
+			position: absolute;
+			top: 0;
+			right: 22%;
+			opacity: 0.2;
+			display: flex;	
+		}
+		.hover-msg:hover{
+			opacity: 1;
+		}
+	
+		.nav-link, a {
 			text-decoration: none;
 			color: white;
 			text-transform: none;
 			font-weight: 600;
 			padding-right: 2rem;
 		}
+		.nav-link{
+			transition: all ease-in 3000ms;
+		}
+		.nav-link:hover, a:hover{
+			text-decoration: underline;
+			text-decoration-thickness: 2px;
+			text-decoration-color: white;
+		}
 		.navbar-nav {
 			display: flex;
 			padding: 0;
+
 		}
 		.navbar-brand {
 			text-decoration: underline;

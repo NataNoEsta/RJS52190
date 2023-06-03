@@ -1,30 +1,44 @@
 import { useEffect, useState } from "react"
-import { pedirDatos } from "../../helpers/pedirDatos"
+// import { pedirDatos } from "../../helpers/pedirDatos"
 import { useParams } from "react-router-dom"
 import ItemDetail from "../ItemDetail/ItemDetail"
+import { db } from "../../firebase/config"
+import { doc, getDoc } from "firebase/firestore"
+import Loader from "../Loader/Loader"
 
 const ItemDetailContainer = () => {
     
     const [item, setItem] = useState({})
     const [loading, setLoading] = useState(true)
     const { itemId } = useParams()
-    console.log(itemId)
-    console.log(item)
     
     useEffect(()=> {
         setLoading(true)
-        pedirDatos()
-            .then((res) => setItem( res.find((el) => el.id === Number(itemId)) ))
+        // 1) armar la referencia del doc
+        const docRef = doc(db, "productos", itemId)
+        // 2) llamada a la referencia (async)
+        getDoc(docRef)
+            .then((doc) => {
+                const itemRef = {
+                    id: doc.id,
+                    ...doc.data()
+                }
+                setItem(itemRef)     
+            })
             .catch((err) => console.log(err))
             .finally(() => setLoading(false))
+        // pedirDatos()
+        //     .then((res) => setItem( res.find((el) => el.id === Number(itemId)) ))
+        //     .catch((err) => console.log(err))
+        //     .finally(() => setLoading(false))
     },[])
 
     return (
-        <div className="item__container container bg-white py-10 m-auto flex flex-row flex-wrap justify-center max-w-6xl">
+        <div className="item__container container bg-white py-8 flex flex-row flex-wrap justify-center max-w-6xl">
         {
             loading
-                ? <h1 className="animate-pulse font-bold text-2xl">cargando...</h1>
-                : <ItemDetail item={item} />
+                ? <Loader/>
+                : <ItemDetail item={item} key={item.id}/>
         }
     </div>
     )

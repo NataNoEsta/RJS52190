@@ -1,27 +1,27 @@
 import "./navbar.scss";
 import { Link } from "react-router-dom";
 import favicon from "/favicon.png";
+import { CartWidget } from "../CartWidget/CartWidget";
+import { useContext } from "react";
+import { AuthContext } from "../../context/AuthContext";
 
-const Navbar = ({ children }) => {
+const Navbar = () => {
+
+	const { user, logout } = useContext(AuthContext)
+	function getnickname() {
+		let name = user.email
+		name = name.split('@')
+		return name[0]
+	}
+
 	return (
-		<nav className="navbar__container mw-lg bg-white shadow-md">
+		<nav className="navbar__container">
 			<div className="container-fluid flex-1 flex-grow justify-around">
 				<span className="inline-flex flex-row">
 					<img src={favicon} alt="logo" className="w-5 h-5 m-1"></img>
 					<Link to="/" className="navbar-brand">
 						mami
 					</Link>
-					<Link to="shop/sweaters" className="nav-link active">
-						Sweaters
-					</Link>
-					<Link to="shop/abrigos" className="nav-link active">
-						Abrigos
-					</Link>
-					<Link to="shop/camisas" className="nav-link active">
-						Camisas
-					</Link>
-				</span>
-				<div className="navbar-nav">
 					<Link
 						className="nav-link active"
 						aria-current="page"
@@ -29,16 +29,26 @@ const Navbar = ({ children }) => {
 					>
 						Shop
 					</Link>
-					<Link to="nosotros" className="nav-link">
-						Nosotros
+					<Link to="contacto" className="nav-link">
+						Contacto
 					</Link>
 					<Link to="ayuda" className="nav-link">
 						FAQ
 					</Link>
+				</span>
+				<div className="container-fluid">
+					{/* <Link to="login" className="nav-link">Login</Link> */}
+					{
+						!user 
+							? <Link to="login" className="nav-link">Login</Link>
+							:<>
+								<p className="hover-msg">Bienvenido {getnickname()}</p>
+								<button className="nav-link" onClick={logout}>Logout</button>
+							</>
+					}
+					<CartWidget />
 				</div>
 			</div>
-
-			{children}
 		</nav>
 	);
 };

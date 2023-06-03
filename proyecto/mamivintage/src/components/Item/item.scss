@@ -1,16 +1,29 @@
 .itemcard {
-    border: 1px solid black;
-    border-radius: 15px;
-    box-shadow: 1px 0 9px rgb(0,0,0, .3);
-    padding: 6px 6px 0 6px;
-    align-items: center;
-    
-    .image_product {
-        max-width: 20rem;
-    }
-    .btn-ver {
-        width: 200px;
-        display: flex;
-        justify-content: center;
-    }
+	border: 1px solid rgb(41, 41, 41);
+	border-radius: 15px;
+	box-shadow: 2px 0 10px rgba(255, 42, 42, 0.3);
+	padding: 6px 6px 0 6px;
+	align-items: center;
+	width: 15rem;
+	transition: all ease-in .1s;
+
+	.image_product {
+		max-width: 10rem;
+	}
+	.btn-ver {
+		max-width: 200px;
+		display: flex;
+		padding: 5px 30px;
+		justify-content: center;
+		transition: all ease-in .2s;
+	}
+	.btn-ver:hover {
+		border: 1px solid salmon;
+		color: salmon;
+		background-color: whitesmoke;
+		border-radius: 0;
+	}
+	h1 {
+		text-overflow: ellipsis;
+	}
 }

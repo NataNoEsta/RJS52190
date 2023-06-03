@@ -1,0 +1,18 @@
+footer {
+  overflow-x: hidden;
+  position: sticky;
+  margin-top: auto !important;
+  bottom: 0 !important;
+}
+footer section .main_row {
+  width: 100%;
+  bottom: 0;
+  display: block;
+}
+footer section .main_row .footer_column {
+  margin: 0;
+}
+footer li {
+  color: white;
+  font-family: "Consolas", sans-serif, monospace;
+}/*# sourceMappingURL=footer.css.map */
