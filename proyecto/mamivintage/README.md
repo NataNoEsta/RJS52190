@@ -4,6 +4,8 @@
 ## Mami Vintage ##
 Live del sitio: [Proyecto React: MamiVintage](https://polite-faloodeh-eab902.netlify.app)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/88e9f4a8-cb88-478f-855e-1ead33b6dd74/deploy-status)](https://app.netlify.com/sites/polite-faloodeh-eab902/deploys)
+
 MamiVintage es una tienda de ropa de segunda mano, cuidadosamente seleccionada para ofrecer productos fuera de circulación de la mejor calidad.
 * La tienda ofrece una primer vista de login/registro para acceder, ofreciendo las opciones de logeo mediante email y contraseña o Google Login
 * La vista de home contiene la **PLP** (página de lista de productos), cada uno con un detalle mínimo, precio y opción de ver más detalles.
