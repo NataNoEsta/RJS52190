@@ -1,22 +1,15 @@
 import "./App.css";
+import Wrapper from './components/Wrapper/Wrapper';
+import Profile from "./components/Profile/Profile";
 
 function App() {
-	return <MostrarNombre />;
-}
-const MostrarNombre = () => {
-	const nombre = "Natasha";
-	const edad = 31;
-	const email = "nasnas@asasad.com";
 	return (
 		<>
-			<h3>{nombre}</h3>
-			<div>{edad}</div>
-			<div>{email}</div>
+		<Wrapper>
+			<Profile />
+		</Wrapper>
 		</>
 	);
-};
-const MostrarNombreComonente = () => {
-	return <h3>Soy un componente</h3>;
-};
+}
 
 export default App;
